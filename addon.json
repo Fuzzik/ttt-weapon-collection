@@ -1,0 +1,14 @@
+{
+	"title"		:	"TTT Weapon Collection",
+	"type"		:	"weapon",
+	"tags"		:	[ "fun", "comic" ],
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.svn*",
+		"*.gitignore",
+		"*.dropbox",
+		"*.md"
+	]
+}
