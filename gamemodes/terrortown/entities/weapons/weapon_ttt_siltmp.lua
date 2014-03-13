@@ -75,7 +75,7 @@ end
 -- Equipment menu information is only needed on the client
 if CLIENT then
    -- Path to the icon material
-   SWEP.Icon = "VGUI/ttt/icon_tmp"
+   SWEP.Icon = "vgui/ttt/icon_tmp"
 
    -- Text shown in the equip menu
    SWEP.EquipMenuData = {
