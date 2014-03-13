@@ -1,9 +1,8 @@
-
 AddCSLuaFile()
 
 if CLIENT then
    SWEP.PrintName = "AUG"
-   SWEP.Slot = 2 -- add 1 to get the slot number key
+   SWEP.Slot = 2
    SWEP.Icon = "vgui/ttt/icon_m16"
 end
 
@@ -99,7 +98,7 @@ function SWEP:PreDrop()
 end
 
 function SWEP:Reload()
-    self.Weapon:DefaultReload( ACT_VM_RELOAD );
+    self:DefaultReload( ACT_VM_RELOAD );
     self:SetIronsights( false )
     self:SetZoom(false)
 end

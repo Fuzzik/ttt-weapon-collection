@@ -1,9 +1,8 @@
-
 AddCSLuaFile()
 
 if CLIENT then
    SWEP.PrintName = "MP5 Navy"			
-   SWEP.Slot = 2 -- add 1 to get the slot number key
+   SWEP.Slot = 2
    SWEP.Icon = "vgui/ttt/icon_mac"
 end
 

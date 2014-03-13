@@ -1,4 +1,3 @@
-
 AddCSLuaFile()
 
 if CLIENT then
@@ -105,9 +104,10 @@ function SWEP:PreDrop()
 end
 
 function SWEP:Reload()
-    self.Weapon:DefaultReload( ACT_VM_RELOAD );
+	if ( self:Clip1() == self.Primary.ClipSize or self.Owner:GetAmmoCount( self.Primary.Ammo ) <= 0 ) then return end
+    self:DefaultReload( ACT_VM_RELOAD )
     self:SetIronsights( false )
-    self:SetZoom(false)
+    self:SetZoom( false )
 end
 
 function SWEP:Holster()

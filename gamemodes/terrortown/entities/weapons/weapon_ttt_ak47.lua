@@ -1,9 +1,8 @@
-
 AddCSLuaFile()
 
 if CLIENT then
    SWEP.PrintName = "AK47"
-   SWEP.Slot = 6 -- add 1 to get the slot number key
+   SWEP.Slot = 6
 end
 
 -- Always derive from weapon_tttbase
