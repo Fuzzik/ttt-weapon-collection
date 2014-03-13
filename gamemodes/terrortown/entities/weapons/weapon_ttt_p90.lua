@@ -175,6 +175,6 @@ if CLIENT then
    -- Text shown in the equip menu
    SWEP.EquipMenuData = {
    type = "Weapon",
-   desc = "Extremely fast firing SMG.\n\nComes with mounted scope."
+   desc = "Extremely fast firing SMG.\n\nComes with a mounted scope."
    };
 end
