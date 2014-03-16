@@ -51,7 +51,7 @@ SWEP.AmmoEnt = "item_ammo_357_ttt"
 
 -- InLoadoutFor is a table of ROLE_* entries that specifies which roles should
 -- receive this weapon as soon as the round starts. In this case, none.
-SWEP.InLoadoutFor = nil
+SWEP.InLoadoutFor = { nil }
 
 -- If AllowDrop is false, players can't manually drop the gun with Q
 SWEP.AllowDrop = true
@@ -101,8 +101,8 @@ end
 function SWEP:Reload()
 	if ( self:Clip1() == self.Primary.ClipSize or self.Owner:GetAmmoCount( self.Primary.Ammo ) <= 0 ) then return end
     self:DefaultReload( ACT_VM_RELOAD )
-    self:SetIronsights( false )
-    self:SetZoom( false )
+    self:SetIronsights(false)
+    self:SetZoom(false)
 end
 
 function SWEP:Holster()

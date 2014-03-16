@@ -53,7 +53,7 @@ SWEP.CanBuy = { ROLE_DETECTIVE }
 
 -- InLoadoutFor is a table of ROLE_* entries that specifies which roles should
 -- receive this weapon as soon as the round starts. In this case, none.
-SWEP.InLoadoutFor = nil
+SWEP.InLoadoutFor = { nil }
 
 -- If LimitedStock is true, you can only buy one per round.
 SWEP.LimitedStock = true
@@ -106,8 +106,8 @@ end
 function SWEP:Reload()
 	if ( self:Clip1() == self.Primary.ClipSize or self.Owner:GetAmmoCount( self.Primary.Ammo ) <= 0 ) then return end
     self:DefaultReload( ACT_VM_RELOAD )
-    self:SetIronsights( false )
-    self:SetZoom( false )
+    self:SetIronsights(false)
+    self:SetZoom(false)
 end
 
 function SWEP:Holster()

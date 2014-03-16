@@ -50,7 +50,7 @@ SWEP.AmmoEnt = "item_box_buckshot_ttt"
 
 -- InLoadoutFor is a table of ROLE_* entries that specifies which roles should
 -- receive this weapon as soon as the round starts. In this case, none.
-SWEP.InLoadoutFor = nil
+SWEP.InLoadoutFor = { nil }
 
 -- If AllowDrop is false, players can't manually drop the gun with Q
 SWEP.AllowDrop = true
