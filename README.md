@@ -1,7 +1,7 @@
 TTT Weapon Collection
 =========
 
-This repo consists of the source code for Fuzzik's "TTT Weapon Collection" addon.
+This repo consists of the source code for Fuzzik543's "TTT Weapon Collection" addon.
 
 All changes will be pushed to this repo and tested before they are included in the Steam addon.
 
