@@ -3,6 +3,7 @@ AddCSLuaFile()
 if CLIENT then
    SWEP.PrintName = "FN P90"
    SWEP.Slot = 6
+   SWEP.Icon = "vgui/ttt/icon_mp5"
 end
 
 -- Always derive from weapon_tttbase
@@ -169,9 +170,6 @@ end
 
 -- Equipment menu information is only needed on the client
 if CLIENT then
-   -- Path to the icon material
-   SWEP.Icon = "vgui/ttt/icon_mp5"
-
    -- Text shown in the equip menu
    SWEP.EquipMenuData = {
    type = "Weapon",

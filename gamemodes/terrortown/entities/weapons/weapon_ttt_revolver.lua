@@ -66,9 +66,6 @@ SWEP.NoSights = true
 
 -- Equipment menu information is only needed on the client
 if CLIENT then
-   -- Path to the icon material
-   SWEP.Icon = "VGUI/ttt/icon_tmp"
-
    -- Text shown in the equip menu
    SWEP.EquipMenuData = {
       type = "Weapon",

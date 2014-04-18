@@ -48,11 +48,15 @@ SWEP.AllowDrop = true
 -- If NoSights is true, the weapon won't have ironsights
 SWEP.NoSights = true
 
-SWEP.EquipMenuData = {
-   type = "Frag Grenade",
-   desc = "A highly explosive grenade."
-};
-
 function SWEP:GetGrenadeName()
    return "ttt_frag_proj"
+end
+
+-- Equipment menu information is only needed on the client
+if CLIENT then
+   -- Text shown in the equip menu
+   SWEP.EquipMenuData = {
+      type = "Grenade",
+      desc = "A highly explosive grenade."
+   };
 end
