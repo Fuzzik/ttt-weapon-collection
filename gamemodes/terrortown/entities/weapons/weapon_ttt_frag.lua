@@ -6,7 +6,7 @@ if CLIENT then
    SWEP.Icon = "vgui/ttt/icon_nades"
 end
 
--- Always derive from weapon_tttbase
+-- Always derive from weapon_tttbasegrenade
 SWEP.Base = "weapon_tttbasegrenade"
 
 -- Standard GMod values

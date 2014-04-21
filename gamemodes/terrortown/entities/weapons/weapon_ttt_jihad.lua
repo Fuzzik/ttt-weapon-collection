@@ -13,7 +13,7 @@ SWEP.Base = "weapon_tttbase"
 SWEP.HoldType = "slam"
 
 SWEP.Primary.Ammo = "none"
-SWEP.Primary.Delay = 5.0
+SWEP.Primary.Delay = 5
 SWEP.Primary.ClipSize = -1
 SWEP.Primary.ClipMax = -1
 SWEP.Primary.DefaultClip = -1

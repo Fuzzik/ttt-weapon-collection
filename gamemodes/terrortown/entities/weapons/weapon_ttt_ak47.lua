@@ -14,8 +14,8 @@ SWEP.HoldType = "ar2"
 
 SWEP.Primary.Ammo = "SMG1"
 SWEP.Primary.Delay = 0.095
-SWEP.Primary.Recoil = 1.70
-SWEP.Primary.Cone = 0.020
+SWEP.Primary.Recoil = 1.7
+SWEP.Primary.Cone = 0.02
 SWEP.Primary.Damage = 25
 SWEP.Primary.Automatic = true
 SWEP.Primary.ClipSize = 35
@@ -30,8 +30,8 @@ SWEP.ViewModelFOV = 50
 SWEP.ViewModel = "models/weapons/cstrike/c_rif_ak47.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_ak47.mdl"
 
-SWEP.IronSightsPos = Vector(-6.518, -4.646, 2.134)
-SWEP.IronSightsAng = Vector(2.737, 0.158, 0)
+SWEP.IronSightsPos = Vector( -6.518, -4.646, 2.134 )
+SWEP.IronSightsAng = Vector( 2.737, 0.158, 0 )
 
 --- TTT config values
 

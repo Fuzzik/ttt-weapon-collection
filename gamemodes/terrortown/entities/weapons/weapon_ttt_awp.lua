@@ -13,9 +13,9 @@ SWEP.Base = "weapon_tttbase"
 SWEP.HoldType = "ar2"
 
 SWEP.Primary.Ammo = "none"
-SWEP.Primary.Delay = 2.0
-SWEP.Primary.Recoil = 10.0
-SWEP.Primary.Cone = 0.0010
+SWEP.Primary.Delay = 2
+SWEP.Primary.Recoil = 10
+SWEP.Primary.Cone = 0.001
 SWEP.Primary.Damage = 500
 SWEP.Primary.Automatic = false
 SWEP.Primary.ClipSize = 2
@@ -23,7 +23,6 @@ SWEP.Primary.ClipMax = 2
 SWEP.Primary.DefaultClip = 2
 SWEP.Primary.Sound = Sound( "Weapon_M4A1.Silenced" )
 SWEP.Secondary.Sound = Sound( "Default.Zoom" )
-SWEP.Tracer = "Tracer"
 
 --- Model settings
 SWEP.UseHands = true
@@ -32,8 +31,8 @@ SWEP.ViewModelFOV = 64
 SWEP.ViewModel = "models/weapons/cstrike/c_snip_awp.mdl"
 SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
 
-SWEP.IronSightsPos = Vector(5, -15, -2)
-SWEP.IronSightsAng = Vector(2.6, 1.37, 3.5)
+SWEP.IronSightsPos = Vector( 5, -15, -2 )
+SWEP.IronSightsAng = Vector( 2.6, 1.37, 3.5 )
 
 --- TTT config values
 

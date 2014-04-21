@@ -14,7 +14,7 @@ SWEP.HoldType = "ar2"
 
 SWEP.Primary.Ammo = "Pistol"
 SWEP.Primary.Delay = 0.07
-SWEP.Primary.Recoil	= 1.0
+SWEP.Primary.Recoil	= 1
 SWEP.Primary.Cone = 0.017
 SWEP.Primary.Damage = 17
 SWEP.Primary.Automatic = true
@@ -30,8 +30,8 @@ SWEP.ViewModelFOV = 64
 SWEP.ViewModel = "models/weapons/cstrike/c_smg_tmp.mdl"
 SWEP.WorldModel	= "models/weapons/w_smg_tmp.mdl"
 
-SWEP.IronSightsPos = Vector (-6.896, -2.822, 2.134)
-SWEP.IronSightsAng = Vector (2.253, 0.209, 0.07)
+SWEP.IronSightsPos = Vector ( -6.896, -2.822, 2.134 )
+SWEP.IronSightsAng = Vector ( 2.253, 0.209, 0.07 )
 
 --- TTT config values
 

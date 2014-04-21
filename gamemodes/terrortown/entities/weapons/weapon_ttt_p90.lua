@@ -31,8 +31,8 @@ SWEP.ViewModelFOV = 60
 SWEP.ViewModel = "models/weapons/cstrike/c_smg_p90.mdl"
 SWEP.WorldModel	= "models/weapons/w_smg_p90.mdl"
 
-SWEP.IronSightsPos = Vector(5, -15, -2)
-SWEP.IronSightsAng = Vector(2.6, 1.37, 3.5)
+SWEP.IronSightsPos = Vector( 5, -15, -2 )
+SWEP.IronSightsAng = Vector( 2.6, 1.37, 3.5 )
 
 --- TTT config values
 
