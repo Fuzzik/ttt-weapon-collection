@@ -30,6 +30,9 @@ SWEP.ViewModelFOV = 54
 SWEP.ViewModel = "models/weapons/c_357.mdl"
 SWEP.WorldModel	= "models/weapons/w_357.mdl"
 
+SWEP.IronSightsPos = Vector ( -4.64, -3.96, 0.68 )
+SWEP.IronSightsAng = Vector ( 0.214, -0.1767, 0 )
+
 --- TTT config values
 
 -- Kind specifies the category this weapon is in. Players can only carry one of
@@ -62,7 +65,7 @@ SWEP.AllowDrop = true
 SWEP.IsSilent = false
 
 -- If NoSights is true, the weapon won't have ironsights
-SWEP.NoSights = true
+SWEP.NoSights = false
 
 -- Equipment menu information is only needed on the client
 if CLIENT then
