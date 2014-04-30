@@ -3,7 +3,7 @@ AddCSLuaFile()
 if CLIENT then
    SWEP.PrintName = "Silenced AWP"
    SWEP.Slot = 6
-   SWEP.Icon = "vgui/ttt/icon_scout"
+   SWEP.Icon = "vgui/ttt/icon_awp"
 end
 
 -- Always derive from weapon_tttbase

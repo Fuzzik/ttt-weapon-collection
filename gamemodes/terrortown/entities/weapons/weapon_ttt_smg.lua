@@ -3,7 +3,7 @@ AddCSLuaFile()
 if CLIENT then
    SWEP.PrintName = "MP7"
    SWEP.Slot = 2
-   SWEP.Icon = "vgui/ttt/icon_mac"
+   SWEP.Icon = "vgui/ttt/icon_smg"
 end
 
 -- Always derive from weapon_tttbase
