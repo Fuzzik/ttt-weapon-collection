@@ -6,6 +6,12 @@ if CLIENT then
    SWEP.Icon = "vgui/ttt/icon_c4"
 end
 
+-- Precache sounds
+function SWEP:Precache()
+   util.PrecacheSound( "siege/big_explosion.wav" )
+   util.PrecacheSound( "siege/jihad.wav" )
+end
+
 -- Always derive from weapon_tttbase
 SWEP.Base = "weapon_tttbase"
 
@@ -62,13 +68,6 @@ SWEP.NoSights = true
 
 -- Reload does nothing
 function SWEP:Reload()
-   return false
-end
-
--- Precache sounds
-function SWEP:Initialize()
-   util.PrecacheSound( "siege/big_explosion.wav" )
-   util.PrecacheSound( "siege/jihad.wav" )
 end
 
 -- Particle effects / Begin attack
