@@ -68,7 +68,7 @@ SWEP.IsSilent = true
 SWEP.NoSights = false
 
 function SWEP:Deploy()
-   self:SendWeaponAnim(ACT_VM_DRAW_SILENCED)
+   self:SendWeaponAnim( ACT_VM_DRAW_SILENCED )
    return true
 end
 
@@ -78,5 +78,5 @@ if CLIENT then
    SWEP.EquipMenuData = {
       type = "Weapon",
       desc = "Low-noise SMG that uses normal 9mm ammo.\n\nVictims will not scream when killed."
-   };
+   }
 end

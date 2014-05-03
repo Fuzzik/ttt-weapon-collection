@@ -72,7 +72,7 @@ end
 
 -- Particle effects / Begin attack
 function SWEP:PrimaryAttack()
-   self:SetNextPrimaryFire(CurTime() + 2)
+   self:SetNextPrimaryFire( CurTime() + 2 )
 
    local effectdata = EffectData()
    effectdata:SetOrigin( self.Owner:GetPos() )
@@ -83,9 +83,9 @@ function SWEP:PrimaryAttack()
    util.Effect( "Sparks", effectdata )
    self.BaseClass.ShootEffects( self )
 
-   -- The rest is only done on the server
-   if (SERVER) then
-      timer.Simple(2, function() self:Asplode() end )
+   -- The rest is done on the server
+   if ( SERVER ) then
+      timer.Simple( 2, function() self:Asplode() end )
       self.Owner:EmitSound( "siege/jihad.wav" )
    end
 end
@@ -110,5 +110,5 @@ if CLIENT then
    SWEP.EquipMenuData = {
       type = "Weapon",
       desc = "Sacrifice yourself to Allah.\n\nYour 72 virgins await."
-   };
+   }
 end

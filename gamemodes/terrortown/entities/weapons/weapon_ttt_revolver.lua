@@ -73,5 +73,5 @@ if CLIENT then
    SWEP.EquipMenuData = {
       type = "Weapon",
       desc = "Eliminate any terrorist in one shot."
-   };
+   }
 end

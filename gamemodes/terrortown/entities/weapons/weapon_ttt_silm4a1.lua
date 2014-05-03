@@ -67,13 +67,13 @@ SWEP.IsSilent = true
 -- If NoSights is true, the weapon won't have ironsights
 SWEP.NoSights = false
 
-function SWEP:SetZoom(state)
+function SWEP:SetZoom( state )
    if CLIENT then return end
-   if not (IsValid(self.Owner) and self.Owner:IsPlayer()) then return end
+   if not ( IsValid( self.Owner ) and self.Owner:IsPlayer() ) then return end
    if state then
-      self.Owner:SetFOV(35, 0.5)
+      self.Owner:SetFOV( 35, 0.5 )
    else
-      self.Owner:SetFOV(0, 0.2)
+      self.Owner:SetFOV( 0, 0.2 )
    end
 end
 
@@ -96,17 +96,17 @@ end
 function SWEP:PreDrop()
    self:SetZoom( false )
    self:SetIronsights( false )
-   return self.BaseClass.PreDrop(self)
+   return self.BaseClass.PreDrop( self )
 end
 
 function SWEP:Reload()
-    if (self:Clip1() == self.Primary.ClipSize or
-        self.Owner:GetAmmoCount(self.Primary.Ammo) <= 0) then
-       return
-    end
-    self:DefaultReload(ACT_VM_RELOAD)
-    self:SetIronsights( false )
-    self:SetZoom( false )
+   if ( self:Clip1() == self.Primary.ClipSize or
+      self.Owner:GetAmmoCount( self.Primary.Ammo ) <= 0 ) then
+      return
+   end
+   self:DefaultReload( ACT_VM_RELOAD )
+   self:SetIronsights( false )
+   self:SetZoom( false )
 end
 
 function SWEP:Holster()
@@ -121,5 +121,5 @@ if CLIENT then
    SWEP.EquipMenuData = {
       type = "Weapon",
       desc = "A modified M4A1 carbine with a suppressor.\n\nVictims will not scream when killed."
-   };
+   }
 end

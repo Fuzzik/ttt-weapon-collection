@@ -58,5 +58,5 @@ if CLIENT then
    SWEP.EquipMenuData = {
       type = "Grenade",
       desc = "A highly explosive grenade."
-   };
+   }
 end
