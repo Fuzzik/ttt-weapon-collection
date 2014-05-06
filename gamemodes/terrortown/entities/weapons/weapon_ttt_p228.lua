@@ -31,7 +31,6 @@ SWEP.ViewModel = "models/weapons/cstrike/c_pist_p228.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_p228.mdl"
 
 SWEP.IronSightsPos = Vector( -5.961, -9.214, 2.839 )
-SWEP.IronSightsAng = Vector( 0, 0, 0 )
 
 --- TTT config values
 
