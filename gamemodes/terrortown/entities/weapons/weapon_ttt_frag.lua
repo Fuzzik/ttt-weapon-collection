@@ -11,7 +11,7 @@ SWEP.Base = "weapon_tttbasegrenade"
 
 -- Standard GMod values
 SWEP.HoldType = "grenade"
-SWEP.Weight	= 5
+SWEP.Weight = 5
 
 -- Model settings
 SWEP.UseHands = true

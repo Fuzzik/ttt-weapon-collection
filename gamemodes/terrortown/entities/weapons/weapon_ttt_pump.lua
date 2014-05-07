@@ -14,7 +14,7 @@ SWEP.HoldType = "shotgun"
 
 SWEP.Primary.Ammo = "Buckshot"
 SWEP.Primary.Delay = 1.2
-SWEP.Primary.Recoil	= 7
+SWEP.Primary.Recoil = 7
 SWEP.Primary.Cone = 0.08
 SWEP.Primary.Damage = 14
 SWEP.Primary.Automatic = true

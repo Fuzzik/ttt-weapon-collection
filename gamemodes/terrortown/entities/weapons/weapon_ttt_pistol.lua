@@ -14,7 +14,7 @@ SWEP.HoldType = "pistol"
 
 SWEP.Primary.Ammo = "Pistol"
 SWEP.Primary.Delay = 0.15
-SWEP.Primary.Recoil	= 0.8
+SWEP.Primary.Recoil = 0.8
 SWEP.Primary.Cone = 0.025
 SWEP.Primary.Damage = 12
 SWEP.Primary.Automatic = true
