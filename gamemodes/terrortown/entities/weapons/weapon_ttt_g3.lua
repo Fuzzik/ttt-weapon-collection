@@ -21,7 +21,7 @@ SWEP.Primary.Automatic = false
 SWEP.Primary.ClipSize = 20
 SWEP.Primary.ClipMax = 40
 SWEP.Primary.DefaultClip = 20
-SWEP.Primary.Sound = Sound( ")weapons/g3sg1/g3sg1-1.wav" )
+SWEP.Primary.Sound = Sound( "Weapon_G3SG1.Single" )
 SWEP.Secondary.Sound = Sound( "Default.Zoom" )
 SWEP.HeadshotMultiplier = 4
 
