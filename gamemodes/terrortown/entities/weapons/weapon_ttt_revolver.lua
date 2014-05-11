@@ -6,6 +6,11 @@ if CLIENT then
    SWEP.Icon = "vgui/ttt/icon_revolver"
 end
 
+-- Precache sounds
+function SWEP:Precache()
+   util.PrecacheSound( "weapons/det_revolver/revolver-fire.wav" )
+end
+
 -- Always derive from weapon_tttbase
 SWEP.Base = "weapon_tttbase"
 
@@ -21,7 +26,7 @@ SWEP.Primary.Automatic = false
 SWEP.Primary.ClipSize = 1
 SWEP.Primary.ClipMax = 1
 SWEP.Primary.DefaultClip = 1
-SWEP.Primary.Sound = Sound( "weapons/det_revolver/revolver-fire.wav" )
+SWEP.Primary.Sound = Sound( "Weapon_DetRev.Single" )
 
 -- Model settings
 SWEP.UseHands = true
