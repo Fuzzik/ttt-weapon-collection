@@ -6,11 +6,6 @@ if CLIENT then
    SWEP.Icon = "vgui/ttt/icon_revolver"
 end
 
--- Precache sounds
-function SWEP:Precache()
-   util.PrecacheSound( "weapons/det_revolver/revolver-fire.wav" )
-end
-
 -- Always derive from weapon_tttbase
 SWEP.Base = "weapon_tttbase"
 
@@ -71,6 +66,11 @@ SWEP.IsSilent = false
 
 -- If NoSights is true, the weapon won't have ironsights
 SWEP.NoSights = false
+
+-- Precache custom sounds
+function SWEP:Precache()
+   util.PrecacheSound( "weapons/det_revolver/revolver-fire.wav" )
+end
 
 -- Give the primary sound an alias
 sound.Add({

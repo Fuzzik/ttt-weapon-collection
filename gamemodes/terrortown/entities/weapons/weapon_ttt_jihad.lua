@@ -6,12 +6,6 @@ if CLIENT then
    SWEP.Icon = "vgui/ttt/icon_c4"
 end
 
--- Precache sounds
-function SWEP:Precache()
-   util.PrecacheSound( "siege/big_explosion.wav" )
-   util.PrecacheSound( "siege/jihad.wav" )
-end
-
 -- Always derive from weapon_tttbase
 SWEP.Base = "weapon_tttbase"
 
@@ -65,6 +59,12 @@ SWEP.IsSilent = false
 
 -- If NoSights is true, the weapon won't have ironsights
 SWEP.NoSights = true
+
+-- Precache custom sounds
+function SWEP:Precache()
+   util.PrecacheSound( "siege/big_explosion.wav" )
+   util.PrecacheSound( "siege/jihad.wav" )
+end
 
 -- Reload does nothing
 function SWEP:Reload()
