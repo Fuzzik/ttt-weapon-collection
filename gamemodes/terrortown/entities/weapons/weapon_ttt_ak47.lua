@@ -72,6 +72,6 @@ if CLIENT then
    -- Text shown in the equip menu
    SWEP.EquipMenuData = {
       type = "Weapon",
-      desc = "Very high damage assault rifle.\n\nHas very high recoil."
+      desc = "Assault rifle with very high damage.\n\nHas very high recoil."
    }
 end
