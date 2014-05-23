@@ -73,12 +73,12 @@ function SWEP:Precache()
 end
 
 -- Give the primary sound an alias
-sound.Add({
+sound.Add( {
    name = "Weapon_DetRev.Single",
-   channel = CHAN_USER_BASE+10,
+   channel = CHAN_USER_BASE + 10,
    volume = 1.0,
    sound = "weapons/det_revolver/revolver-fire.wav"
-})
+} )
 
 -- Equipment menu information is only needed on the client
 if CLIENT then

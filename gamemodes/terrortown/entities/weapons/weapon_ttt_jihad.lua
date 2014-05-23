@@ -73,7 +73,7 @@ end
 -- Particle effects / Begin attack
 function SWEP:PrimaryAttack()
    self:SetNextPrimaryFire( CurTime() + 2 )
-   
+
    local effectdata = EffectData()
    effectdata:SetOrigin( self.Owner:GetPos() )
    effectdata:SetNormal( self.Owner:GetPos() )
@@ -82,7 +82,7 @@ function SWEP:PrimaryAttack()
    effectdata:SetRadius( 78 )
    util.Effect( "Sparks", effectdata )
    self.BaseClass.ShootEffects( self )
-   
+
    -- The rest is done on the server
    if ( SERVER ) then
       timer.Simple( 2, function() self:Asplode() end )
@@ -93,7 +93,7 @@ end
 -- Explosion properties
 function SWEP:Asplode()
    local k, v
-   
+
    local ent = ents.Create( "env_explosion" )
    ent:SetPos( self.Owner:GetPos() )
    ent:SetOwner( self.Owner )

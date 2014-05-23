@@ -65,18 +65,18 @@ SWEP.reloadtimer = 0
 
 function SWEP:SetupDataTables()
    self:DTVar( "Bool", 0, "reloading" )
-   
+
    return self.BaseClass.SetupDataTables( self )
 end
 
 function SWEP:Reload()
-   --if self:GetNetworkedBool( "reloading", false ) then return end
+   -- if self:GetNetworkedBool( "reloading", false ) then return end
    if self.dt.reloading then return end
-   
+
    if not IsFirstTimePredicted() then return end
-   
+
    if self:Clip1() < self.Primary.ClipSize and self.Owner:GetAmmoCount( self.Primary.Ammo ) > 0 then
-   
+
       if self:StartReload() then
          return
       end
@@ -84,61 +84,61 @@ function SWEP:Reload()
 end
 
 function SWEP:StartReload()
-   --if self:GetNWBool( "reloading", false ) then
+   -- if self:GetNWBool( "reloading", false ) then
    if self.dt.reloading then
       return false
    end
-   
+
    self:SetIronsights( false )
-   
+
    if not IsFirstTimePredicted() then return false end
-   
+
    self:SetNextPrimaryFire( CurTime() + self.Primary.Delay )
-   
+
    local ply = self.Owner
-   
+
    if not ply or ply:GetAmmoCount( self.Primary.Ammo ) <= 0 then 
       return false
    end
-   
+
    local wep = self
-   
+
    if wep:Clip1() >= self.Primary.ClipSize then 
       return false 
    end
-   
+
    wep:SendWeaponAnim( ACT_SHOTGUN_RELOAD_START )
-   
+
    self.reloadtimer =  CurTime() + wep:SequenceDuration()
-   
+
    --wep:SetNWBool( "reloading", true )
    self.dt.reloading = true
-   
+
    return true
 end
 
 function SWEP:PerformReload()
    local ply = self.Owner
-   
-   -- prevent normal shooting in between reloads
+
+   -- Prevent normal shooting in between reloads
    self:SetNextPrimaryFire( CurTime() + self.Primary.Delay )
-   
+
    if not ply or ply:GetAmmoCount( self.Primary.Ammo ) <= 0 then return end
-   
+
    if self:Clip1() >= self.Primary.ClipSize then return end
-   
+
    self.Owner:RemoveAmmo( 1, self.Primary.Ammo, false )
    self:SetClip1( self:Clip1() + 1 )
-   
+
    self:SendWeaponAnim( ACT_VM_RELOAD )
-   
+
    self.reloadtimer = CurTime() + self:SequenceDuration()
 end
 
 function SWEP:FinishReload()
    self.dt.reloading = false
    self:SendWeaponAnim( ACT_SHOTGUN_RELOAD_FINISH )
-   
+
    self.reloadtimer = CurTime() + self:SequenceDuration()
 end
 
@@ -157,9 +157,9 @@ function SWEP:Think()
          self:FinishReload()
          return
       end
-      
+
       if self.reloadtimer <= CurTime() then
-      
+
          if self.Owner:GetAmmoCount( self.Primary.Ammo ) <= 0 then
             self:FinishReload()
          elseif self:Clip1() < self.Primary.ClipSize then
@@ -185,19 +185,19 @@ end
 function SWEP:GetHeadshotMultiplier( victim, dmginfo )
    local att = dmginfo:GetAttacker()
    if not IsValid( att ) then return 3 end
-   
+
    local dist = victim:GetPos():Distance( att:GetPos() )
    local d = math.max( 0, dist - 140 )
-   
-   -- decay from 3.1 to 1 slowly as distance increases
+
+   -- Decay from 3.1 to 1 slowly as distance increases
    return 1 + math.max( 0, ( 2.1 - 0.002 * ( d ^ 1.25 ) ) )
 end
 
 function SWEP:SecondaryAttack()
    if self.NoSights or ( not self.IronSightsPos ) or self.dt.reloading then return end
-   --if self:GetNextSecondaryFire() > CurTime() then return end
-   
+   -- if self:GetNextSecondaryFire() > CurTime() then return end
+
    self:SetIronsights( not self:GetIronsights() )
-   
+
    self:SetNextSecondaryFire( CurTime() + 0.3 )
 end
