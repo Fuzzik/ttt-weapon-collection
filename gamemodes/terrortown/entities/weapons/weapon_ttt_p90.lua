@@ -170,8 +170,9 @@ end
 -- Equipment menu information is only needed on the client
 if CLIENT then
    -- Text shown in the equip menu
-   SWEP.EquipMenuData = {
-   type = "Weapon",
-   desc = "Extremely fast firing SMG.\n\nComes with a mounted scope."
+   SWEP.EquipMenuData =
+   {
+      type = "Weapon",
+      desc = "Extremely fast firing SMG.\n\nComes with a mounted scope."
    }
 end

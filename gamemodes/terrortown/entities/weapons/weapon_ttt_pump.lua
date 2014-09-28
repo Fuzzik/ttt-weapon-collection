@@ -111,7 +111,7 @@ function SWEP:StartReload()
 
    self.reloadtimer =  CurTime() + wep:SequenceDuration()
 
-   --wep:SetNWBool( "reloading", true )
+   -- wep:SetNWBool( "reloading", true )
    self.dt.reloading = true
 
    return true
