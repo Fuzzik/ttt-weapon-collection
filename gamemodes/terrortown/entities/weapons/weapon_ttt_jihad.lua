@@ -107,8 +107,7 @@ end
 -- Equipment menu information is only needed on the client
 if CLIENT then
    -- Text shown in the equip menu
-   SWEP.EquipMenuData =
-   {
+   SWEP.EquipMenuData = {
       type = "Weapon",
       desc = "Sacrifice yourself to Allah.\n\nYour 72 virgins await."
    }

@@ -170,8 +170,7 @@ end
 -- Equipment menu information is only needed on the client
 if CLIENT then
    -- Text shown in the equip menu
-   SWEP.EquipMenuData =
-   {
+   SWEP.EquipMenuData = {
       type = "Weapon",
       desc = "Silenced AWP Sniper Rifle.\n\nOnly has two shots.\n\nVictims will not scream when killed."
    }

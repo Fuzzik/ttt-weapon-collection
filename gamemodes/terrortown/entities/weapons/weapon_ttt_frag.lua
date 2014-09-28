@@ -55,8 +55,7 @@ end
 -- Equipment menu information is only needed on the client
 if CLIENT then
    -- Text shown in the equip menu
-   SWEP.EquipMenuData =
-   {
+   SWEP.EquipMenuData = {
       type = "Grenade",
       desc = "A highly explosive grenade."
    }

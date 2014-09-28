@@ -70,8 +70,7 @@ SWEP.NoSights = false
 -- Equipment menu information is only needed on the client
 if CLIENT then
    -- Text shown in the equip menu
-   SWEP.EquipMenuData =
-   {
+   SWEP.EquipMenuData = {
       type = "Weapon",
       desc = "Assault rifle with very high damage.\n\nHas very high recoil."
    }
