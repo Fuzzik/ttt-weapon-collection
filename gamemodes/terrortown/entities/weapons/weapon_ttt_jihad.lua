@@ -19,7 +19,7 @@ SWEP.Primary.ClipMax = -1
 SWEP.Primary.DefaultClip = -1
 SWEP.Primary.Automatic = false
 
--- Model settings
+-- Model properties
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 54

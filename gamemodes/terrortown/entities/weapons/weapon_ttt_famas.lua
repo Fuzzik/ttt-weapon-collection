@@ -23,7 +23,7 @@ SWEP.Primary.ClipMax = 60
 SWEP.Primary.DefaultClip = 30
 SWEP.Primary.Sound = Sound( "Weapon_FAMAS.Single" )
 
--- Model settings
+-- Model properties
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 64

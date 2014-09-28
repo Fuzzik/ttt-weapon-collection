@@ -25,7 +25,7 @@ SWEP.Primary.Sound = Sound( "Weapon_G3SG1.Single" )
 SWEP.Secondary.Sound = Sound( "Default.Zoom" )
 SWEP.HeadshotMultiplier = 4
 
--- Model settings
+-- Model properties
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 60

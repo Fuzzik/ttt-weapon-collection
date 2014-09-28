@@ -24,12 +24,12 @@ SWEP.Primary.DefaultClip = 50
 SWEP.Primary.Sound = Sound( "Weapon_P90.Single" )
 SWEP.Secondary.Sound = Sound( "Default.Zoom" )
 
--- Model settings
+-- Model properties
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 60
 SWEP.ViewModel = Model( "models/weapons/cstrike/c_smg_p90.mdl" )
-SWEP.WorldModel	= Model( "models/weapons/w_smg_p90.mdl" )
+SWEP.WorldModel = Model( "models/weapons/w_smg_p90.mdl" )
 
 SWEP.IronSightsPos = Vector( 5, -15, -2 )
 SWEP.IronSightsAng = Vector( 2.6, 1.37, 3.5 )

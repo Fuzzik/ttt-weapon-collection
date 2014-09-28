@@ -24,12 +24,12 @@ SWEP.Primary.DefaultClip = 8
 SWEP.Primary.Sound = Sound( "Weapon_M3.Single" )
 SWEP.Primary.NumShots = 8
 
--- Model settings
+-- Model properties
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 58
 SWEP.ViewModel = Model( "models/weapons/cstrike/c_shot_m3super90.mdl" )
-SWEP.WorldModel	= Model( "models/weapons/w_shot_m3super90.mdl" )
+SWEP.WorldModel = Model( "models/weapons/w_shot_m3super90.mdl" )
 
 SWEP.IronSightsPos = Vector( -7.67, -12.86, 3.371 )
 SWEP.IronSightsAng = Vector( 0.637, 0.01, -1.458 )

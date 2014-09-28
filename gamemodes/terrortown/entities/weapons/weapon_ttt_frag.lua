@@ -13,12 +13,12 @@ SWEP.Base = "weapon_tttbasegrenade"
 SWEP.HoldType = "grenade"
 SWEP.Weight = 5
 
--- Model settings
+-- Model properties
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 54
 SWEP.ViewModel = Model( "models/weapons/cstrike/c_eq_fraggrenade.mdl" )
-SWEP.WorldModel	= Model( "models/weapons/w_eq_fraggrenade.mdl" )
+SWEP.WorldModel = Model( "models/weapons/w_eq_fraggrenade.mdl" )
 
 --- TTT config values
 

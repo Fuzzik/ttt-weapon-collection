@@ -23,7 +23,7 @@ SWEP.Primary.ClipMax = 70
 SWEP.Primary.DefaultClip = 35
 SWEP.Primary.Sound = Sound( "Weapon_AK47.Single" )
 
--- Model settings
+-- Model properties
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 50

@@ -24,7 +24,7 @@ SWEP.Primary.DefaultClip = 2
 SWEP.Primary.Sound = Sound( "Weapon_M4A1.Silenced" )
 SWEP.Secondary.Sound = Sound( "Default.Zoom" )
 
---- Model settings
+--- Model properties
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 64
