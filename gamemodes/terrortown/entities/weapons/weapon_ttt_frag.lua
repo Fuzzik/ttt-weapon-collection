@@ -17,8 +17,8 @@ SWEP.Weight = 5
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 54
-SWEP.ViewModel = "models/weapons/cstrike/c_eq_fraggrenade.mdl"
-SWEP.WorldModel	= "models/weapons/w_eq_fraggrenade.mdl"
+SWEP.ViewModel = Model( "models/weapons/cstrike/c_eq_fraggrenade.mdl" )
+SWEP.WorldModel	= Model( "models/weapons/w_eq_fraggrenade.mdl" )
 
 --- TTT config values
 

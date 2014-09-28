@@ -23,8 +23,8 @@ SWEP.Primary.Automatic = false
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 54
-SWEP.ViewModel = "models/weapons/cstrike/c_c4.mdl"
-SWEP.WorldModel = "models/weapons/w_c4.mdl"
+SWEP.ViewModel = Model( "models/weapons/cstrike/c_c4.mdl" )
+SWEP.WorldModel = Model( "models/weapons/w_c4.mdl" )
 
 --- TTT config values
 

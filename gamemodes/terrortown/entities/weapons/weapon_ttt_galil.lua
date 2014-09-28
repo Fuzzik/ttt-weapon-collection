@@ -27,8 +27,8 @@ SWEP.Primary.Sound = Sound( "Weapon_Galil.Single" )
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 58
-SWEP.ViewModel = "models/weapons/cstrike/c_rif_galil.mdl"
-SWEP.WorldModel = "models/weapons/w_rif_galil.mdl"
+SWEP.ViewModel = Model( "models/weapons/cstrike/c_rif_galil.mdl" )
+SWEP.WorldModel = Model( "models/weapons/w_rif_galil.mdl" )
 
 SWEP.IronSightsPos = Vector( -6.361, -11.103, 2.519 )
 

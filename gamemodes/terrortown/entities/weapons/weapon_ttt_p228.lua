@@ -27,8 +27,8 @@ SWEP.Primary.Sound = Sound( "Weapon_P228.Single" )
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 54
-SWEP.ViewModel = "models/weapons/cstrike/c_pist_p228.mdl"
-SWEP.WorldModel = "models/weapons/w_pist_p228.mdl"
+SWEP.ViewModel = Model( "models/weapons/cstrike/c_pist_p228.mdl" )
+SWEP.WorldModel = Model( "models/weapons/w_pist_p228.mdl" )
 
 SWEP.IronSightsPos = Vector( -5.961, -9.214, 2.839 )
 

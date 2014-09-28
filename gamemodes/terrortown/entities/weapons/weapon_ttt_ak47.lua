@@ -27,8 +27,8 @@ SWEP.Primary.Sound = Sound( "Weapon_AK47.Single" )
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 50
-SWEP.ViewModel = "models/weapons/cstrike/c_rif_ak47.mdl"
-SWEP.WorldModel = "models/weapons/w_rif_ak47.mdl"
+SWEP.ViewModel = Model( "models/weapons/cstrike/c_rif_ak47.mdl" )
+SWEP.WorldModel = Model( "models/weapons/w_rif_ak47.mdl" )
 
 SWEP.IronSightsPos = Vector( -6.518, -4.646, 2.134 )
 SWEP.IronSightsAng = Vector( 2.737, 0.158, 0 )
