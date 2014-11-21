@@ -20,7 +20,7 @@ SWEP.ViewModelFOV = 54
 SWEP.ViewModel = Model( "models/weapons/cstrike/c_eq_fraggrenade.mdl" )
 SWEP.WorldModel = Model( "models/weapons/w_eq_fraggrenade.mdl" )
 
---- TTT config values
+-- TTT config values
 
 -- Kind specifies the category this weapon is in. Players can only carry one of
 -- each. Can be: WEAPON_... MELEE, PISTOL, HEAVY, NADE, CARRY, EQUIP1, EQUIP2 or ROLE.

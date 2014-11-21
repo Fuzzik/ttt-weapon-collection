@@ -33,7 +33,7 @@ SWEP.WorldModel = Model( "models/weapons/w_smg_mp5.mdl" )
 SWEP.IronSightsPos = Vector( -5.361, -7.481, 1.559 )
 SWEP.IronSightsAng = Vector( 2, 0, 0 )
 
---- TTT config values
+-- TTT config values
 
 -- Kind specifies the category this weapon is in. Players can only carry one of
 -- each. Can be: WEAPON_... MELEE, PISTOL, HEAVY, NADE, CARRY, EQUIP1, EQUIP2 or ROLE.
