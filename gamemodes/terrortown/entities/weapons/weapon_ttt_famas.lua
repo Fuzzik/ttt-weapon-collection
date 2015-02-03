@@ -44,7 +44,7 @@ SWEP.Kind = WEAPON_HEAVY
 SWEP.AutoSpawnable = true
 
 -- The AmmoEnt is the ammo entity that can be picked up when carrying this gun.
-SWEP.AmmoEnt = "item_ammo_smg1_ttt"
+SWEP.AmmoEnt = "item_ammo_pistol_ttt"
 
 -- InLoadoutFor is a table of ROLE_* entries that specifies which roles should
 -- receive this weapon as soon as the round starts. In this case, none.
