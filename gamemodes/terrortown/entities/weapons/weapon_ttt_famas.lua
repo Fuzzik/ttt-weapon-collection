@@ -12,7 +12,7 @@ SWEP.Base = "weapon_tttbase"
 -- Standard GMod values
 SWEP.HoldType = "ar2"
 
-SWEP.Primary.Ammo = "SMG1"
+SWEP.Primary.Ammo = "Pistol"
 SWEP.Primary.Delay = 0.08
 SWEP.Primary.Recoil = 0.8
 SWEP.Primary.Cone = 0.025
