@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 if CLIENT then
-   SWEP.PrintName = "SW 500"
+   SWEP.PrintName = "S&W 500"
    SWEP.Slot = 6
    SWEP.Icon = "vgui/ttt/icon_revolver"
 end
