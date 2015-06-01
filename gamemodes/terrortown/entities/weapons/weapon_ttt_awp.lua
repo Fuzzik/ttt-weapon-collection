@@ -4,6 +4,7 @@ if CLIENT then
    SWEP.PrintName = "Silenced AWP"
    SWEP.Slot = 6
    SWEP.Icon = "vgui/ttt/icon_awp"
+   SWEP.IconLetter = "r"
 end
 
 -- Always derive from weapon_tttbase
@@ -24,7 +25,7 @@ SWEP.Primary.DefaultClip = 2
 SWEP.Primary.Sound = Sound( "Weapon_M4A1.Silenced" )
 SWEP.Secondary.Sound = Sound( "Default.Zoom" )
 
---- Model properties
+-- Model properties
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 64

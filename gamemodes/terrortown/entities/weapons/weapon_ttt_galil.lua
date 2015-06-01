@@ -4,6 +4,7 @@ if CLIENT then
    SWEP.PrintName = "Galil"
    SWEP.Slot = 2
    SWEP.Icon = "vgui/ttt/icon_galil"
+   SWEP.IconLetter = "v"
 end
 
 -- Always derive from weapon_tttbase

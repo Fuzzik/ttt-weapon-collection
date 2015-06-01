@@ -4,6 +4,7 @@ if CLIENT then
    SWEP.PrintName = "Frag Grenade"
    SWEP.Slot = 3
    SWEP.Icon = "vgui/ttt/icon_nades"
+   SWEP.IconLetter = "O"
 end
 
 -- Always derive from weapon_tttbasegrenade
