@@ -74,12 +74,17 @@ function SWEP:SetZoom( state )
    end
 end
 
+function SWEP:PrimaryAttack( worldsnd )
+   self.BaseClass.PrimaryAttack( self, worldsnd )
+   self:SetNextSecondaryFire( CurTime() + 0.1 )
+end
+
 -- Add some zoom to ironsights for this gun
 function SWEP:SecondaryAttack()
    if not self.IronSightsPos then return end
    if self:GetNextSecondaryFire() > CurTime() then return end
 
-   bIronsights = not self:GetIronsights()
+   local bIronsights = not self:GetIronsights()
 
    self:SetIronsights( bIronsights )
 
@@ -117,9 +122,12 @@ if CLIENT then
       if self:GetIronsights() then
          surface.SetDrawColor( 0, 0, 0, 255 )
 
-         local x = ScrW() / 2.0
-         local y = ScrH() / 2.0
-         local scope_size = ScrH()
+         local scrW = ScrW()
+         local scrH = ScrH()
+
+         local x = scrW / 2.0
+         local y = scrH / 2.0
+         local scope_size = scrH
 
          -- Crosshair
          local gap = 80
@@ -142,6 +150,10 @@ if CLIENT then
          surface.DrawRect( 0, 0, w, scope_size )
          surface.DrawRect( x + sh - 2, 0, w, scope_size )
 
+         -- Cover gaps on top and bottom of screen
+         surface.DrawLine( 0, 0, scrW, 0 )
+         surface.DrawLine( 0, scrH - 1, scrW, scrH - 1 )
+
          surface.SetDrawColor( 255, 0, 0, 255 )
          surface.DrawLine( x, y, x + 1, y + 1 )
 
@@ -150,7 +162,6 @@ if CLIENT then
          surface.SetDrawColor( 255, 255, 255, 255 )
 
          surface.DrawTexturedRectRotated( x, y, scope_size, scope_size, 0 )
-
       else
          return self.BaseClass.DrawHUD( self )
       end
