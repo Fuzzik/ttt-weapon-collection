@@ -86,13 +86,13 @@ function SWEP:PrimaryAttack()
 
    -- The rest is done on the server
    if ( SERVER ) then
-      timer.Simple( 2, function() self:Asplode() end )
+      timer.Simple( 2, function() self:Explode() end )
       self.Owner:EmitSound( "siege/jihad.wav" )
    end
 end
 
 -- Explosion properties
-function SWEP:Asplode()
+function SWEP:Explode()
    local k, v
 
    local ent = ents.Create( "env_explosion" )
