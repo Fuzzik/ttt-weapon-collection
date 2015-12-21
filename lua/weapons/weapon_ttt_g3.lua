@@ -3,7 +3,7 @@ AddCSLuaFile()
 if CLIENT then
    SWEP.PrintName = "G3SG1"
    SWEP.Slot = 2
-   SWEP.Icon = "vgui/ttt/icon_scout"
+   SWEP.Icon = "vgui/ttt/icon_sg550"
    SWEP.IconLetter = "i"
 end
 
