@@ -9,7 +9,6 @@ end
 
 SWEP.Base = "weapon_tttbase"
 SWEP.HoldType = "slam"
-SWEP.DrawCrosshair = false
 
 SWEP.Primary.Ammo = "none"
 SWEP.Primary.Delay = 5
