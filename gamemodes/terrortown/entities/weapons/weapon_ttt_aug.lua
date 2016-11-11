@@ -7,10 +7,7 @@ if CLIENT then
    SWEP.IconLetter = "e"
 end
 
--- Always derive from weapon_tttbase
 SWEP.Base = "weapon_tttbase"
-
--- Standard GMod values
 SWEP.HoldType = "ar2"
 
 SWEP.Primary.Ammo = "SMG1"
@@ -25,7 +22,6 @@ SWEP.Primary.DefaultClip = 30
 SWEP.Primary.Sound = Sound( "Weapon_AUG.Single" )
 SWEP.Secondary.Sound = Sound( "Default.Zoom" )
 
--- Model properties
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 60
@@ -35,31 +31,12 @@ SWEP.WorldModel = Model( "models/weapons/w_rif_aug.mdl" )
 SWEP.IronSightsPos = Vector( 5, -15, -2 )
 SWEP.IronSightsAng = Vector( 2.6, 1.37, 3.5 )
 
--- TTT config values
-
--- Kind specifies the category this weapon is in. Players can only carry one of
--- each. Can be: WEAPON_... MELEE, PISTOL, HEAVY, NADE, CARRY, EQUIP1, EQUIP2 or ROLE.
--- Matching SWEP.Slot values: 0      1       2     3      4      6       7        8
 SWEP.Kind = WEAPON_HEAVY
-
--- If AutoSpawnable is true and SWEP.Kind is not WEAPON_EQUIP1/2, then this gun can
--- be spawned as a random weapon.
 SWEP.AutoSpawnable = true
-
--- The AmmoEnt is the ammo entity that can be picked up when carrying this gun.
 SWEP.AmmoEnt = "item_ammo_smg1_ttt"
-
--- InLoadoutFor is a table of ROLE_* entries that specifies which roles should
--- receive this weapon as soon as the round starts. In this case, none.
 SWEP.InLoadoutFor = { nil }
-
--- If AllowDrop is false, players can't manually drop the gun with Q
 SWEP.AllowDrop = true
-
--- If IsSilent is true, victims will not scream upon death.
 SWEP.IsSilent = false
-
--- If NoSights is true, the weapon won't have ironsights
 SWEP.NoSights = false
 
 function SWEP:SetZoom( state )
@@ -79,7 +56,6 @@ function SWEP:PrimaryAttack( worldsnd )
    self:SetNextSecondaryFire( CurTime() + 0.1 )
 end
 
--- Add some zoom to ironsights for this gun
 function SWEP:SecondaryAttack()
    if not self.IronSightsPos then return end
    if self:GetNextSecondaryFire() > CurTime() then return end
@@ -129,7 +105,6 @@ if CLIENT then
          local y = scrH / 2.0
          local scope_size = scrH
 
-         -- Crosshair
          local gap = 80
          local length = scope_size
          surface.DrawLine( x - length, y, x - gap, y )
@@ -144,20 +119,17 @@ if CLIENT then
          surface.DrawLine( x, y - length, x, y - gap )
          surface.DrawLine( x, y + length, x, y + gap )
 
-         -- Cover edges
          local sh = scope_size / 2
          local w = ( x - sh ) + 2
          surface.DrawRect( 0, 0, w, scope_size )
          surface.DrawRect( x + sh - 2, 0, w, scope_size )
 
-         -- Cover gaps on top and bottom of screen
          surface.DrawLine( 0, 0, scrW, 0 )
          surface.DrawLine( 0, scrH - 1, scrW, scrH - 1 )
 
          surface.SetDrawColor( 255, 0, 0, 255 )
          surface.DrawLine( x, y, x + 1, y + 1 )
 
-         -- Scope
          surface.SetTexture( scope )
          surface.SetDrawColor( 255, 255, 255, 255 )
 

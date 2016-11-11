@@ -1,5 +1,3 @@
--- Frag grenade projectile
-
 AddCSLuaFile()
 
 ENT.Type = "anim"
@@ -21,7 +19,6 @@ function ENT:Explode( tr )
       self:SetNoDraw( true )
       self:SetSolid( SOLID_NONE )
 
-      -- Pull out of the surface
       if tr.Fraction != 1.0 then
          self:SetPos( tr.HitPos + tr.HitNormal * 0.6 )
       end
