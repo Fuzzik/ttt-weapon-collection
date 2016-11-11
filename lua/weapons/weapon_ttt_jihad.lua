@@ -101,7 +101,7 @@ function SWEP:Explode()
    ent:SetKeyValue( "iMagnitude", "200" )
    ent:Spawn()
    ent:Fire( "Explode", 0, 0 )
-   ent:EmitSound( "siege/big_explosion.wav", 500, 500 )
+   ent:EmitSound( "siege/big_explosion.wav", 140 )
    self:Remove()
 end
 
