@@ -70,7 +70,7 @@ SWEP.NoSights = false
 
 -- Precache custom sounds
 function SWEP:Precache()
-   util.PrecacheSound( "weapons/det_revolver/revolver_fire.wav" )
+   util.PrecacheSound( "weapons/det_revolver/det_revolver_fire.wav" )
 end
 
 -- Give the primary sound an alias
@@ -78,7 +78,7 @@ sound.Add ( {
    name = "Weapon_DetRev.Single",
    channel = CHAN_USER_BASE + 10,
    volume = 1.0,
-   sound = "weapons/det_revolver/revolver_fire.wav"
+   sound = "weapons/det_revolver/det_revolver_fire.wav"
 } )
 
 -- Equipment menu information is only needed on the client
