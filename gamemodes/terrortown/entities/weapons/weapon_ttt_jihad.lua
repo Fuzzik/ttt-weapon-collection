@@ -26,6 +26,7 @@ SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 54
 SWEP.ViewModel = Model( "models/weapons/cstrike/c_c4.mdl" )
 SWEP.WorldModel = Model( "models/weapons/w_c4.mdl" )
+SWEP.DrawCrosshair = false
 
 -- TTT config values
 
