@@ -11,6 +11,8 @@ SWEP.Base = "weapon_tttbase"
 SWEP.HoldType = "ar2"
 
 SWEP.Primary.Ammo = "Pistol"
+SWEP.Primary.Delay = 0.12
+SWEP.Primary.Recoil = 1.2
 SWEP.Primary.Cone = 0.018
 SWEP.Primary.Damage = 19
 SWEP.Primary.Automatic = true
