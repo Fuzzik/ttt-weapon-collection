@@ -41,14 +41,14 @@ SWEP.IsSilent = false
 SWEP.NoSights = false
 
 function SWEP:Precache()
-   util.PrecacheSound( "weapons/det_revolver/det_revolver_fire.wav" )
+   util.PrecacheSound( "weapons/det_revolver/revolver-fire.wav" )
 end
 
 sound.Add ( {
    name = "Weapon_DetRev.Single",
    channel = CHAN_USER_BASE + 10,
    volume = 1.0,
-   sound = "weapons/det_revolver/det_revolver_fire.wav"
+   sound = "weapons/det_revolver/revolver-fire.wav"
 } )
 
 if CLIENT then
