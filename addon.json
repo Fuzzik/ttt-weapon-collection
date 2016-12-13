@@ -1,0 +1,12 @@
+{
+	"title"		:	"TTT Weapon Collection",
+	"type"		:	"weapon",
+	"tags"		:	[ "fun", "realism" ],
+	"ignore"	:
+	[
+		".git*",
+		".gitattributes",
+		".gitignore",
+		"*.md"
+	]
+}
