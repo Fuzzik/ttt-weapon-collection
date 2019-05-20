@@ -34,8 +34,8 @@ SWEP.IsSilent = false
 SWEP.NoSights = true
 
 function SWEP:Precache()
-   util.PrecacheSound( "siege/big_explosion.wav" )
-   util.PrecacheSound( "siege/jihad.wav" )
+   util.PrecacheSound( "ttt/big_explosion.wav" )
+   util.PrecacheSound( "ttt/jihad.wav" )
 end
 
 function SWEP:Reload()
@@ -55,7 +55,7 @@ function SWEP:PrimaryAttack()
 
    if ( SERVER ) then
       timer.Simple( 2, function() self:Explode() end )
-      self.Owner:EmitSound( "siege/jihad.wav" )
+      self.Owner:EmitSound( "ttt/jihad.wav" )
    end
 end
 
@@ -68,7 +68,7 @@ function SWEP:Explode()
    ent:SetKeyValue( "iMagnitude", "200" )
    ent:Spawn()
    ent:Fire( "Explode", 0, 0 )
-   ent:EmitSound( "siege/big_explosion.wav", 140 )
+   ent:EmitSound( "ttt/big_explosion.wav", 140 )
    self:Remove()
 end
 
