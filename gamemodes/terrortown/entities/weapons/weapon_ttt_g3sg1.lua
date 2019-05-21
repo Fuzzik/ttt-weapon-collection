@@ -1,3 +1,7 @@
+include( "autorun/server/create_convars.lua" )
+
+if ( fuzzik_disable_g3sg1 == "0" ) then -- Disable convar start
+
 AddCSLuaFile()
 
 if CLIENT then
@@ -144,3 +148,5 @@ if CLIENT then
       return ( self:GetIronsights() and 0.2 ) or nil
    end
 end
+
+end -- Disable convar end

@@ -1,3 +1,7 @@
+include( "autorun/server/create_convars.lua" )
+
+if ( fuzzik_disable_awp == "0" ) then -- Disable convar start
+
 AddCSLuaFile()
 
 if CLIENT then
@@ -152,3 +156,5 @@ if CLIENT then
       desc = "Silenced AWP Sniper Rifle.\n\nOnly has two shots.\n\nVictims will not scream when killed."
    }
 end
+
+end -- Disable convar end

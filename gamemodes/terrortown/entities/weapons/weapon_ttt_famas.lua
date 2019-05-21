@@ -1,3 +1,7 @@
+include( "autorun/server/create_convars.lua" )
+
+if ( fuzzik_disable_famas == "0" ) then -- Disable convar start
+
 AddCSLuaFile()
 
 if CLIENT then
@@ -36,3 +40,5 @@ SWEP.InLoadoutFor = { nil }
 SWEP.AllowDrop = true
 SWEP.IsSilent = false
 SWEP.NoSights = false
+
+end -- Disable convar end

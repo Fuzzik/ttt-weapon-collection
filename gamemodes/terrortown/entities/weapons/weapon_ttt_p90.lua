@@ -1,3 +1,7 @@
+include( "autorun/server/create_convars.lua" )
+
+if ( fuzzik_disable_p90 == "0" ) then -- Disable convar start
+
 AddCSLuaFile()
 
 if CLIENT then
@@ -152,3 +156,5 @@ if CLIENT then
       desc = "Extremely fast firing SMG.\n\nComes with a mounted scope."
    }
 end
+
+end -- Disable convar end

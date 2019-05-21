@@ -1,3 +1,7 @@
+include( "autorun/server/create_convars.lua" )
+
+if ( fuzzik_disable_pump == "0" ) then -- Disable convar start
+
 AddCSLuaFile()
 
 if CLIENT then
@@ -169,3 +173,5 @@ function SWEP:SecondaryAttack()
 
    self:SetNextSecondaryFire( CurTime() + 0.3 )
 end
+
+end -- Disable convar end

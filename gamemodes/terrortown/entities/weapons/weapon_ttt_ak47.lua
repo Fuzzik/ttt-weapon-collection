@@ -1,3 +1,7 @@
+include( "autorun/server/create_convars.lua" )
+
+if ( fuzzik_disable_ak47 == "0" ) then -- Disable convar start
+
 AddCSLuaFile()
 
 if CLIENT then
@@ -46,3 +50,5 @@ if CLIENT then
       desc = "Assault rifle with very high damage.\n\nHas very high recoil."
    }
 end
+
+end -- Disable convar end

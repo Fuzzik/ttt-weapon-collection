@@ -1,3 +1,7 @@
+include( "autorun/server/create_convars.lua" )
+
+if ( fuzzik_disable_tmp_s == "0" ) then -- Disable convar start
+
 AddCSLuaFile()
 
 if CLIENT then
@@ -46,3 +50,5 @@ if CLIENT then
       desc = "Low-noise SMG that uses normal 9mm ammo.\n\nVictims will not scream when killed."
    }
 end
+
+end -- Disable convar end

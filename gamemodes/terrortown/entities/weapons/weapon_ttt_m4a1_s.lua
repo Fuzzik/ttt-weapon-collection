@@ -1,3 +1,7 @@
+include( "autorun/server/create_convars.lua" )
+
+if ( fuzzik_disable_m4a1_s == "0" ) then -- Disable convar start
+
 AddCSLuaFile()
 
 if CLIENT then
@@ -46,3 +50,5 @@ if CLIENT then
       desc = "A modified M4A1 carbine with a suppressor.\n\nVictims will not scream when killed."
    }
 end
+
+end -- Disable convar end

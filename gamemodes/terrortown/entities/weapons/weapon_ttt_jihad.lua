@@ -1,3 +1,7 @@
+include( "autorun/server/create_convars.lua" )
+
+if ( fuzzik_disable_jihad == "0" ) then -- Disable convar start
+
 AddCSLuaFile()
 
 if CLIENT then
@@ -78,3 +82,5 @@ if CLIENT then
       desc = "Sacrifice yourself to Allah.\n\nYour 72 virgins await."
    }
 end
+
+end -- Disable convar end
