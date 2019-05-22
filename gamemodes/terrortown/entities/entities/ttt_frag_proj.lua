@@ -1,7 +1,3 @@
-include( "autorun/server/create_convars.lua" )
-
-if ( fuzzik_disable_frag == "0" ) then -- Disable convar start
-
 AddCSLuaFile()
 
 ENT.Type = "anim"
@@ -60,5 +56,3 @@ function ENT:Explode( tr )
       self:SetDetonateExact( 0 )
    end
 end
-
-end -- Disable convar end
