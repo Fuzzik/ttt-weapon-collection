@@ -1,7 +1,5 @@
 include( "autorun/server/create_convars.lua" )
 
-if ( fuzzik_disable_p228 == "0" ) then -- Disable convar start
-
 AddCSLuaFile()
 
 if CLIENT then
@@ -34,11 +32,13 @@ SWEP.WorldModel = Model( "models/weapons/w_pist_p228.mdl" )
 SWEP.IronSightsPos = Vector( -5.961, -9.214, 2.839 )
 
 SWEP.Kind = WEAPON_PISTOL
-SWEP.AutoSpawnable = true
+
+if ( fuzzik_disable_p228 == "0" ) then -- Disable if convar != 0
+	SWEP.AutoSpawnable = true
+end
+
 SWEP.AmmoEnt = "item_ammo_pistol_ttt"
 SWEP.InLoadoutFor = { nil }
 SWEP.AllowDrop = true
 SWEP.IsSilent = false
 SWEP.NoSights = false
-
-end -- Disable convar end

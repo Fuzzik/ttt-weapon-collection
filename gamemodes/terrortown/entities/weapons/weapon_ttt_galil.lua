@@ -1,7 +1,5 @@
 include( "autorun/server/create_convars.lua" )
 
-if ( fuzzik_disable_galil == "0" ) then -- Disable convar start
-
 AddCSLuaFile()
 
 if CLIENT then
@@ -34,11 +32,13 @@ SWEP.WorldModel = Model( "models/weapons/w_rif_galil.mdl" )
 SWEP.IronSightsPos = Vector( -6.361, -11.103, 2.519 )
 
 SWEP.Kind = WEAPON_HEAVY
-SWEP.AutoSpawnable = true
+
+if ( fuzzik_disable_galil == "0" ) then -- Disable if convar != 0
+	SWEP.AutoSpawnable = true
+end
+
 SWEP.AmmoEnt = "item_ammo_smg1_ttt"
 SWEP.InLoadoutFor = { nil }
 SWEP.AllowDrop = true
 SWEP.IsSilent = false
 SWEP.NoSights = false
-
-end -- Disable convar end

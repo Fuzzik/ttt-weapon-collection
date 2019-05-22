@@ -1,7 +1,5 @@
 include( "autorun/server/create_convars.lua" )
 
-if ( fuzzik_disable_awp == "0" ) then -- Disable convar start
-
 AddCSLuaFile()
 
 if CLIENT then
@@ -38,7 +36,11 @@ SWEP.IronSightsAng = Vector( 2.6, 1.37, 3.5 )
 SWEP.Kind = WEAPON_EQUIP1
 SWEP.AutoSpawnable = false
 SWEP.AmmoEnt = "none"
-SWEP.CanBuy = { ROLE_TRAITOR }
+
+if ( fuzzik_disable_awp == "0" ) then -- Disable if convar != 0
+	SWEP.CanBuy = { ROLE_TRAITOR }
+end
+
 SWEP.InLoadoutFor = { nil }
 SWEP.LimitedStock = true
 SWEP.AllowDrop = true
@@ -156,5 +158,3 @@ if CLIENT then
       desc = "Silenced AWP Sniper Rifle.\n\nOnly has two shots.\n\nVictims will not scream when killed."
    }
 end
-
-end -- Disable convar end

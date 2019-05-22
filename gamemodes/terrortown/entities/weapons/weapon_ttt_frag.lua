@@ -1,7 +1,5 @@
 include( "autorun/server/create_convars.lua" )
 
-if ( fuzzik_disable_frag == "0" ) then -- Disable convar start
-
 AddCSLuaFile()
 
 if CLIENT then
@@ -22,7 +20,11 @@ SWEP.WorldModel = Model( "models/weapons/w_eq_fraggrenade.mdl" )
 
 SWEP.Kind = WEAPON_NADE
 SWEP.AutoSpawnable = false
-SWEP.CanBuy = { ROLE_TRAITOR }
+
+if ( fuzzik_disable_frag == "0" ) then -- Disable if convar != 0
+	SWEP.CanBuy = { ROLE_TRAITOR }
+end
+
 SWEP.InLoadoutFor = { nil }
 SWEP.LimitedStock = true
 SWEP.AllowDrop = true
@@ -38,5 +40,3 @@ if CLIENT then
       desc = "A highly explosive grenade."
    }
 end
-
-end -- Disable convar end

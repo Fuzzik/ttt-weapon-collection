@@ -1,7 +1,5 @@
 include( "autorun/server/create_convars.lua" )
 
-if ( fuzzik_disable_ak47 == "0" ) then -- Disable convar start
-
 AddCSLuaFile()
 
 if CLIENT then
@@ -37,7 +35,11 @@ SWEP.IronSightsAng = Vector( 2.737, 0.158, 0 )
 SWEP.Kind = WEAPON_EQUIP1
 SWEP.AutoSpawnable = false
 SWEP.AmmoEnt = "item_ammo_smg1_ttt"
-SWEP.CanBuy = { ROLE_TRAITOR }
+
+if ( fuzzik_disable_ak47 == "0" ) then -- Disable if convar != 0
+	SWEP.CanBuy = { ROLE_TRAITOR }
+end
+
 SWEP.InLoadoutFor = { nil }
 SWEP.LimitedStock = true
 SWEP.AllowDrop = true
@@ -50,5 +52,3 @@ if CLIENT then
       desc = "Assault rifle with very high damage.\n\nHas very high recoil."
    }
 end
-
-end -- Disable convar end

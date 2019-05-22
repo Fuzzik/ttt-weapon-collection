@@ -1,7 +1,5 @@
 include( "autorun/server/create_convars.lua" )
 
-if ( fuzzik_disable_revolver == "0" ) then -- Disable convar start
-
 AddCSLuaFile()
 
 if CLIENT then
@@ -37,7 +35,11 @@ SWEP.IronSightsAng = Vector ( 0.214, -0.1767, 0 )
 SWEP.Kind = WEAPON_EQUIP1
 SWEP.AutoSpawnable = false
 SWEP.AmmoEnt = "none"
-SWEP.CanBuy = { ROLE_DETECTIVE }
+
+if ( fuzzik_disable_revolver == "0" ) then -- Disable if convar != 0
+	SWEP.CanBuy = { ROLE_DETECTIVE }
+end
+
 SWEP.InLoadoutFor = { nil }
 SWEP.LimitedStock = true
 SWEP.AllowDrop = true
@@ -61,5 +63,3 @@ if CLIENT then
       desc = "Eliminate any terrorist in one shot."
    }
 end
-
-end -- Disable convar end

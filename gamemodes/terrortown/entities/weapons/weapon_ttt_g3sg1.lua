@@ -1,7 +1,5 @@
 include( "autorun/server/create_convars.lua" )
 
-if ( fuzzik_disable_g3sg1 == "0" ) then -- Disable convar start
-
 AddCSLuaFile()
 
 if CLIENT then
@@ -37,7 +35,11 @@ SWEP.IronSightsPos = Vector( 5, -15, -2 )
 SWEP.IronSightsAng = Vector( 2.6, 1.37, 3.5 )
 
 SWEP.Kind = WEAPON_HEAVY
-SWEP.AutoSpawnable = true
+
+if ( fuzzik_disable_g3sg1 == "0" ) then -- Disable if convar != 0
+	SWEP.AutoSpawnable = true
+end
+
 SWEP.AmmoEnt = "item_ammo_357_ttt"
 SWEP.InLoadoutFor = { nil }
 SWEP.AllowDrop = true
@@ -148,5 +150,3 @@ if CLIENT then
       return ( self:GetIronsights() and 0.2 ) or nil
    end
 end
-
-end -- Disable convar end
