@@ -1,5 +1,3 @@
-include( "autorun/server/create_convars.lua" )
-
 AddCSLuaFile()
 
 if CLIENT then
@@ -34,7 +32,7 @@ SWEP.IronSightsAng = Vector( 0.275, -1, 0 )
 
 SWEP.Kind = WEAPON_PISTOL
 
-if ( fuzzik_disable_usp == "0" ) then -- Disable if convar != 0
+if GetConVar( "fuzzik_disable_usp" ):GetString() == "0" then -- Disable if convar != 0
 	SWEP.AutoSpawnable = true
 end
 

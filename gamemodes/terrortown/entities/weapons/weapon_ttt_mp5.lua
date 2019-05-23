@@ -1,5 +1,3 @@
-include( "autorun/server/create_convars.lua" )
-
 AddCSLuaFile()
 
 if CLIENT then
@@ -34,7 +32,7 @@ SWEP.IronSightsAng = Vector( 2, 0, 0 )
 
 SWEP.Kind = WEAPON_HEAVY
 
-if ( fuzzik_disable_mp5 == "0" ) then -- Disable if convar != 0
+if GetConVar( "fuzzik_disable_mp5" ):GetString() == "0" then -- Disable if convar != 0
 	SWEP.AutoSpawnable = true
 end
 

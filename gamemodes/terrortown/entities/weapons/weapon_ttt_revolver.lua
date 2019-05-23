@@ -1,5 +1,3 @@
-include( "autorun/server/create_convars.lua" )
-
 AddCSLuaFile()
 
 if CLIENT then
@@ -36,7 +34,7 @@ SWEP.Kind = WEAPON_EQUIP1
 SWEP.AutoSpawnable = false
 SWEP.AmmoEnt = "none"
 
-if ( fuzzik_disable_revolver == "0" ) then -- Disable if convar != 0
+if GetConVar( "fuzzik_disable_revolver" ):GetString() == "0" then -- Disable if convar != 0
 	SWEP.CanBuy = { ROLE_DETECTIVE }
 end
 

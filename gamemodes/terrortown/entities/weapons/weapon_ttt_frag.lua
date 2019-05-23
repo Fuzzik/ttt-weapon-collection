@@ -1,5 +1,3 @@
-include( "autorun/server/create_convars.lua" )
-
 AddCSLuaFile()
 
 if CLIENT then
@@ -21,7 +19,7 @@ SWEP.WorldModel = Model( "models/weapons/w_eq_fraggrenade.mdl" )
 SWEP.Kind = WEAPON_NADE
 SWEP.AutoSpawnable = false
 
-if ( fuzzik_disable_frag == "0" ) then -- Disable if convar != 0
+if GetConVar( "fuzzik_disable_frag" ):GetString() == "0" then -- Disable if convar != 0
 	SWEP.CanBuy = { ROLE_TRAITOR }
 end
 
