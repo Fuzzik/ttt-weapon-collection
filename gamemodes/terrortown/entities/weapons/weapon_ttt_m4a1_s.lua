@@ -44,6 +44,14 @@ SWEP.AllowDrop = true
 SWEP.IsSilent = true
 SWEP.NoSights = false
 
+SWEP.PrimaryAnim = ACT_VM_PRIMARYATTACK_SILENCED
+SWEP.ReloadAnim = ACT_VM_RELOAD_SILENCED
+
+function SWEP:Deploy()
+   self:SendWeaponAnim(ACT_VM_DRAW_SILENCED)
+   return self.BaseClass.Deploy(self)
+end
+
 if CLIENT then
    SWEP.EquipMenuData = {
       type = "Weapon",
