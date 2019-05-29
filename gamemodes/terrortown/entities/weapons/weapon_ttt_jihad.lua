@@ -49,8 +49,8 @@ function SWEP:PrimaryAttack()
    self:SetNextPrimaryFire( CurTime() + 2 )
 
    local effectdata = EffectData()
-   effectdata:SetOrigin( self.Owner:GetPos() )
-   effectdata:SetNormal( self.Owner:GetPos() )
+   effectdata:SetOrigin( self:GetOwner():GetPos() )
+   effectdata:SetNormal( self:GetOwner():GetPos() )
    effectdata:SetMagnitude( 8 )
    effectdata:SetScale( 1 )
    effectdata:SetRadius( 78 )
@@ -59,7 +59,7 @@ function SWEP:PrimaryAttack()
 
    if ( SERVER ) then
       timer.Simple( 2, function() self:Explode() end )
-      self.Owner:EmitSound( "siege/jihad.wav" )
+      self:GetOwner():EmitSound( "siege/jihad.wav" )
    end
 end
 
@@ -67,8 +67,8 @@ function SWEP:Explode()
    local k, v
 
    local ent = ents.Create( "env_explosion" )
-   ent:SetPos( self.Owner:GetPos() )
-   ent:SetOwner( self.Owner )
+   ent:SetPos( self:GetOwner():GetPos() )
+   ent:SetOwner( self:GetOwner() )
    ent:SetKeyValue( "iMagnitude", "200" )
    ent:Spawn()
    ent:Fire( "Explode", 0, 0 )
