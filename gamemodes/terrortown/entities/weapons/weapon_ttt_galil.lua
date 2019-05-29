@@ -1,10 +1,10 @@
 AddCSLuaFile()
 
 if CLIENT then
-   SWEP.PrintName = "Galil"
-   SWEP.Slot = 2
-   SWEP.Icon = "vgui/ttt/icon_galil"
-   SWEP.IconLetter = "v"
+	SWEP.PrintName = "Galil"
+	SWEP.Slot = 2
+	SWEP.Icon = "vgui/ttt/icon_galil"
+	SWEP.IconLetter = "v"
 end
 
 SWEP.Base = "weapon_tttbase"
@@ -19,24 +19,24 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.ClipMax = 60
 SWEP.Primary.DefaultClip = 30
-SWEP.Primary.Sound = Sound( "Weapon_Galil.Single" )
+SWEP.Primary.Sound = Sound("Weapon_Galil.Single")
 
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 58
-SWEP.ViewModel = Model( "models/weapons/cstrike/c_rif_galil.mdl" )
-SWEP.WorldModel = Model( "models/weapons/w_rif_galil.mdl" )
+SWEP.ViewModel = Model("models/weapons/cstrike/c_rif_galil.mdl")
+SWEP.WorldModel = Model("models/weapons/w_rif_galil.mdl")
 
-SWEP.IronSightsPos = Vector( -6.361, -11.103, 2.519 )
+SWEP.IronSightsPos = Vector(-6.361, -11.103, 2.519)
 
 SWEP.Kind = WEAPON_HEAVY
 
-if GetConVar( "fuzzik_disable_galil" ):GetString() == "0" then -- Disable if convar != 0
+if GetConVar("fuzzik_disable_galil"):GetString() == "0" then -- Disable if convar != 0
 	SWEP.AutoSpawnable = true
 end
 
 SWEP.AmmoEnt = "item_ammo_smg1_ttt"
-SWEP.InLoadoutFor = { nil }
+SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true
 SWEP.IsSilent = false
 SWEP.NoSights = false

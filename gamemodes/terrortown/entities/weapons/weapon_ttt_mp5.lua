@@ -1,10 +1,10 @@
 AddCSLuaFile()
 
 if CLIENT then
-   SWEP.PrintName = "MP5 Navy"			
-   SWEP.Slot = 2
-   SWEP.Icon = "vgui/ttt/icon_mp5"
-   SWEP.IconLetter = "x"
+	SWEP.PrintName = "MP5 Navy"
+	SWEP.Slot = 2
+	SWEP.Icon = "vgui/ttt/icon_mp5"
+	SWEP.IconLetter = "x"
 end
 
 SWEP.Base = "weapon_tttbase"
@@ -19,25 +19,25 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.ClipMax = 60
 SWEP.Primary.DefaultClip = 30
-SWEP.Primary.Sound = Sound( "Weapon_MP5Navy.Single" )
+SWEP.Primary.Sound = Sound("Weapon_MP5Navy.Single")
 
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 60
-SWEP.ViewModel = Model( "models/weapons/cstrike/c_smg_mp5.mdl" )
-SWEP.WorldModel = Model( "models/weapons/w_smg_mp5.mdl" )
+SWEP.ViewModel = Model("models/weapons/cstrike/c_smg_mp5.mdl")
+SWEP.WorldModel = Model("models/weapons/w_smg_mp5.mdl")
 
-SWEP.IronSightsPos = Vector( -5.361, -7.481, 1.559 )
-SWEP.IronSightsAng = Vector( 2, 0, 0 )
+SWEP.IronSightsPos = Vector(-5.361, -7.481, 1.559)
+SWEP.IronSightsAng = Vector(2, 0, 0)
 
 SWEP.Kind = WEAPON_HEAVY
 
-if GetConVar( "fuzzik_disable_mp5" ):GetString() == "0" then -- Disable if convar != 0
+if GetConVar("fuzzik_disable_mp5"):GetString() == "0" then -- Disable if convar != 0
 	SWEP.AutoSpawnable = true
 end
 
 SWEP.AmmoEnt = "item_ammo_pistol_ttt"
-SWEP.InLoadoutFor = { nil }
+SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true
 SWEP.IsSilent = false
 SWEP.NoSights = false

@@ -1,10 +1,10 @@
 AddCSLuaFile()
 
 if CLIENT then
-   SWEP.PrintName = "P228"
-   SWEP.Slot = 1
-   SWEP.Icon = "vgui/ttt/icon_glock"
-   SWEP.IconLetter = "y"
+	SWEP.PrintName = "P228"
+	SWEP.Slot = 1
+	SWEP.Icon = "vgui/ttt/icon_glock"
+	SWEP.IconLetter = "y"
 end
 
 SWEP.Base = "weapon_tttbase"
@@ -19,24 +19,24 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.ClipSize = 20
 SWEP.Primary.ClipMax = 60
 SWEP.Primary.DefaultClip = 20
-SWEP.Primary.Sound = Sound( "Weapon_P228.Single" )
+SWEP.Primary.Sound = Sound("Weapon_P228.Single")
 
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 54
-SWEP.ViewModel = Model( "models/weapons/cstrike/c_pist_p228.mdl" )
-SWEP.WorldModel = Model( "models/weapons/w_pist_p228.mdl" )
+SWEP.ViewModel = Model("models/weapons/cstrike/c_pist_p228.mdl")
+SWEP.WorldModel = Model("models/weapons/w_pist_p228.mdl")
 
-SWEP.IronSightsPos = Vector( -5.961, -9.214, 2.839 )
+SWEP.IronSightsPos = Vector(-5.961, -9.214, 2.839)
 
 SWEP.Kind = WEAPON_PISTOL
 
-if GetConVar( "fuzzik_disable_p228" ):GetString() == "0" then -- Disable if convar != 0
+if GetConVar("fuzzik_disable_p228"):GetString() == "0" then -- Disable if convar != 0
 	SWEP.AutoSpawnable = true
 end
 
 SWEP.AmmoEnt = "item_ammo_pistol_ttt"
-SWEP.InLoadoutFor = { nil }
+SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true
 SWEP.IsSilent = false
 SWEP.NoSights = false

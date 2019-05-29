@@ -1,10 +1,10 @@
 AddCSLuaFile()
 
 if CLIENT then
-   SWEP.PrintName = "S&W 500"
-   SWEP.Slot = 6
-   SWEP.Icon = "vgui/ttt/icon_revolver"
-   SWEP.IconLetter = "f"
+	SWEP.PrintName = "S&W 500"
+	SWEP.Slot = 6
+	SWEP.Icon = "vgui/ttt/icon_revolver"
+	SWEP.IconLetter = "f"
 end
 
 SWEP.Base = "weapon_tttbase"
@@ -19,45 +19,45 @@ SWEP.Primary.Automatic = false
 SWEP.Primary.ClipSize = 1
 SWEP.Primary.ClipMax = 1
 SWEP.Primary.DefaultClip = 1
-SWEP.Primary.Sound = Sound( "Weapon_DetRev.Single" )
+SWEP.Primary.Sound = Sound("Weapon_DetRev.Single")
 
 SWEP.UseHands = true
 SWEP.ViewModelFlip = false
 SWEP.ViewModelFOV = 54
-SWEP.ViewModel = Model( "models/weapons/c_357.mdl" )
-SWEP.WorldModel = Model( "models/weapons/w_357.mdl" )
+SWEP.ViewModel = Model("models/weapons/c_357.mdl")
+SWEP.WorldModel = Model("models/weapons/w_357.mdl")
 
-SWEP.IronSightsPos = Vector ( -4.64, -3.96, 0.68 )
-SWEP.IronSightsAng = Vector ( 0.214, -0.1767, 0 )
+SWEP.IronSightsPos = Vector (-4.64, -3.96, 0.68)
+SWEP.IronSightsAng = Vector (0.214, -0.1767, 0)
 
 SWEP.Kind = WEAPON_EQUIP1
 SWEP.AutoSpawnable = false
 SWEP.AmmoEnt = "none"
 
-if GetConVar( "fuzzik_disable_revolver" ):GetString() == "0" then -- Disable if convar != 0
-	SWEP.CanBuy = { ROLE_DETECTIVE }
+if GetConVar("fuzzik_disable_revolver"):GetString() == "0" then -- Disable if convar != 0
+	SWEP.CanBuy = {ROLE_DETECTIVE}
 end
 
-SWEP.InLoadoutFor = { nil }
+SWEP.InLoadoutFor = {nil}
 SWEP.LimitedStock = true
 SWEP.AllowDrop = true
 SWEP.IsSilent = false
 SWEP.NoSights = false
 
 function SWEP:Precache()
-   util.PrecacheSound( "weapons/det_revolver/revolver-fire.wav" )
+	util.PrecacheSound("weapons/det_revolver/revolver-fire.wav")
 end
 
-sound.Add ( {
-   name = "Weapon_DetRev.Single",
-   channel = CHAN_USER_BASE + 10,
-   volume = 1.0,
-   sound = "weapons/det_revolver/revolver-fire.wav"
-} )
+sound.Add ({
+	name = "Weapon_DetRev.Single",
+	channel = CHAN_USER_BASE + 10,
+	volume = 1.0,
+	sound = "weapons/det_revolver/revolver-fire.wav"
+})
 
 if CLIENT then
-   SWEP.EquipMenuData = {
-      type = "Weapon",
-      desc = "Eliminate any terrorist in one shot."
-   }
+	SWEP.EquipMenuData = {
+		type = "Weapon",
+		desc = "Eliminate any terrorist in one shot."
+	}
 end
