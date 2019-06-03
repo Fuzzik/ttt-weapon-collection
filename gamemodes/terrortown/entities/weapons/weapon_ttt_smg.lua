@@ -40,3 +40,15 @@ SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true
 SWEP.IsSilent = false
 SWEP.NoSights = false
+
+-- Redefine weapon_tttbase's SWEP:Reload() here with one extra line to explicitly emit a
+-- reload sound. HL2 weapon models need this because the queue to emit this sound is not
+-- baked into the models unlike with CS:S weapon models. Keep in mind that updates to
+-- weapon_tttbase's SWEP:Reload() might break this code and should be pulled from
+-- Facepunch/garrysmod if made.
+function SWEP:Reload()
+	if (self:Clip1() == self.Primary.ClipSize or self:GetOwner():GetAmmoCount(self.Primary.Ammo) <= 0) then return end
+	self:DefaultReload(self.ReloadAnim)
+	self:EmitSound("Weapon_SMG1.Reload") -- My added line
+	self:SetIronsights(false)
+end
