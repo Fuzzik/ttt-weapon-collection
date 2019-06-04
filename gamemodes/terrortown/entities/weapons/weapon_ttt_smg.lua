@@ -42,7 +42,7 @@ SWEP.IsSilent = false
 SWEP.NoSights = false
 
 -- Redefine weapon_tttbase's SWEP:Reload() here with one extra line to explicitly emit a
--- reload sound. HL2 weapon models need this because the queue to emit this sound is not
+-- reload sound. HL2 weapon models need this because the instruction to emit this sound is not
 -- baked into the models unlike with CS:S weapon models. Keep in mind that updates to
 -- weapon_tttbase's SWEP:Reload() might break this code and should be pulled from
 -- Facepunch/garrysmod if made.
