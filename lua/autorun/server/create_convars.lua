@@ -15,6 +15,7 @@ CreateConVar("fuzzik_disable_p228", "0", FCVAR_ARCHIVE)
 CreateConVar("fuzzik_disable_usp", "0", FCVAR_ARCHIVE) -- weapon_ttt_pistol
 CreateConVar("fuzzik_disable_pump", "0", FCVAR_ARCHIVE)
 CreateConVar("fuzzik_disable_revolver", "0", FCVAR_ARCHIVE)
+CreateConVar("fuzzik_disable_sg550", "0", FCVAR_ARCHIVE)
 CreateConVar("fuzzik_disable_sg552", "0", FCVAR_ARCHIVE)
 CreateConVar("fuzzik_disable_mp7", "0", FCVAR_ARCHIVE) -- weapon_ttt_smg
 CreateConVar("fuzzik_disable_tmp_s", "0", FCVAR_ARCHIVE)
