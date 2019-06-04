@@ -11,10 +11,10 @@ SWEP.Base = "weapon_tttbase"
 SWEP.HoldType = "ar2"
 
 SWEP.Primary.Ammo = "357"
-SWEP.Primary.Delay = 0.3
+SWEP.Primary.Delay = 0.6
 SWEP.Primary.Recoil = 2
 SWEP.Primary.Cone = 0.005
-SWEP.Primary.Damage = 37
+SWEP.Primary.Damage = 42
 SWEP.Primary.Automatic = false
 SWEP.Primary.ClipSize = 20
 SWEP.Primary.ClipMax = 40
