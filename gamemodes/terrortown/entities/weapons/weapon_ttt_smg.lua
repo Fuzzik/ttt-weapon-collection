@@ -30,11 +30,7 @@ SWEP.WorldModel = Model("models/weapons/w_smg1.mdl")
 SWEP.IronSightsPos = Vector(-6.39, -3.32, 1.05)
 
 SWEP.Kind = WEAPON_HEAVY
-
-if GetConVar("fuzzik_disable_mp7"):GetString() == "0" then -- Disable if convar != 0
-	SWEP.AutoSpawnable = true
-end
-
+SWEP.AutoSpawnable = true
 SWEP.AmmoEnt = "item_ammo_pistol_ttt"
 SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true

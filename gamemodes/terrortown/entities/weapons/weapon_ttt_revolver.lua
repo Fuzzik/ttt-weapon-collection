@@ -33,11 +33,7 @@ SWEP.IronSightsAng = Vector (0.214, -0.1767, 0)
 SWEP.Kind = WEAPON_EQUIP1
 SWEP.AutoSpawnable = false
 SWEP.AmmoEnt = "none"
-
-if GetConVar("fuzzik_disable_revolver"):GetString() == "0" then -- Disable if convar != 0
-	SWEP.CanBuy = {ROLE_DETECTIVE}
-end
-
+SWEP.CanBuy = {ROLE_DETECTIVE}
 SWEP.InLoadoutFor = {nil}
 SWEP.LimitedStock = true
 SWEP.AllowDrop = true

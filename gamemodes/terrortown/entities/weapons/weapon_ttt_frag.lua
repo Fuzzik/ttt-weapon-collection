@@ -18,11 +18,7 @@ SWEP.WorldModel = Model("models/weapons/w_eq_fraggrenade.mdl")
 
 SWEP.Kind = WEAPON_NADE
 SWEP.AutoSpawnable = false
-
-if GetConVar("fuzzik_disable_frag"):GetString() == "0" then -- Disable if convar != 0
-	SWEP.CanBuy = {ROLE_TRAITOR}
-end
-
+SWEP.CanBuy = {ROLE_TRAITOR}
 SWEP.InLoadoutFor = {nil}
 SWEP.LimitedStock = true
 SWEP.AllowDrop = true

@@ -30,11 +30,7 @@ SWEP.WorldModel = Model("models/weapons/w_rif_galil.mdl")
 SWEP.IronSightsPos = Vector(-6.361, -11.103, 2.519)
 
 SWEP.Kind = WEAPON_HEAVY
-
-if GetConVar("fuzzik_disable_galil"):GetString() == "0" then -- Disable if convar != 0
-	SWEP.AutoSpawnable = true
-end
-
+SWEP.AutoSpawnable = true
 SWEP.AmmoEnt = "item_ammo_smg1_ttt"
 SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true

@@ -30,11 +30,7 @@ SWEP.WorldModel = Model("models/weapons/w_rif_famas.mdl")
 SWEP.IronSightsPos = Vector(-6.24, -2.757, 1.36)
 
 SWEP.Kind = WEAPON_HEAVY
-
-if GetConVar("fuzzik_disable_famas"):GetString() == "0" then -- Disable if convar != 0
-	SWEP.AutoSpawnable = true
-end
-
+SWEP.AutoSpawnable = true
 SWEP.AmmoEnt = "item_ammo_pistol_ttt"
 SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true

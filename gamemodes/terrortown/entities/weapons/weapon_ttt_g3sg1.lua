@@ -33,11 +33,7 @@ SWEP.IronSightsPos = Vector(5, -15, -2)
 SWEP.IronSightsAng = Vector(2.6, 1.37, 3.5)
 
 SWEP.Kind = WEAPON_HEAVY
-
-if GetConVar("fuzzik_disable_g3sg1"):GetString() == "0" then -- Disable if convar != 0
-	SWEP.AutoSpawnable = true
-end
-
+SWEP.AutoSpawnable = true
 SWEP.AmmoEnt = "item_ammo_357_ttt"
 SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true

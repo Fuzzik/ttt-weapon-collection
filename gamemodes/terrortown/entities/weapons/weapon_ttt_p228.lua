@@ -30,11 +30,7 @@ SWEP.WorldModel = Model("models/weapons/w_pist_p228.mdl")
 SWEP.IronSightsPos = Vector(-5.961, -9.214, 2.839)
 
 SWEP.Kind = WEAPON_PISTOL
-
-if GetConVar("fuzzik_disable_p228"):GetString() == "0" then -- Disable if convar != 0
-	SWEP.AutoSpawnable = true
-end
-
+SWEP.AutoSpawnable = true
 SWEP.AmmoEnt = "item_ammo_pistol_ttt"
 SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true

@@ -26,11 +26,7 @@ SWEP.WorldModel = Model("models/weapons/w_c4.mdl")
 SWEP.Kind = WEAPON_EQUIP1
 SWEP.AutoSpawnable = false
 SWEP.AmmoEnt = "none"
-
-if GetConVar("fuzzik_disable_jihad"):GetString() == "0" then -- Disable if convar != 0
-	SWEP.CanBuy = {ROLE_TRAITOR}
-end
-
+SWEP.CanBuy = {ROLE_TRAITOR}
 SWEP.InLoadoutFor = {nil}
 SWEP.LimitedStock = true
 SWEP.AllowDrop = true

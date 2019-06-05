@@ -33,11 +33,7 @@ SWEP.IronSightsAng = Vector (2.253, 0.209, 0.07)
 SWEP.Kind = WEAPON_EQUIP1
 SWEP.AutoSpawnable = false
 SWEP.AmmoEnt = "item_ammo_pistol_ttt"
-
-if GetConVar("fuzzik_disable_tmp_s"):GetString() == "0" then -- Disable if convar != 0
-	SWEP.CanBuy = {ROLE_TRAITOR}
-end
-
+SWEP.CanBuy = {ROLE_TRAITOR}
 SWEP.InLoadoutFor = {nil}
 SWEP.LimitedStock = true
 SWEP.AllowDrop = true

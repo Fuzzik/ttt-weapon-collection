@@ -34,11 +34,7 @@ SWEP.IronSightsPos = Vector(-7.67, -12.86, 3.371)
 SWEP.IronSightsAng = Vector(0.637, 0.01, -1.458)
 
 SWEP.Kind = WEAPON_HEAVY
-
-if GetConVar("fuzzik_disable_pump"):GetString() == "0" then -- Disable if convar != 0
-	SWEP.AutoSpawnable = true
-end
-
+SWEP.AutoSpawnable = true
 SWEP.AmmoEnt = "item_box_buckshot_ttt"
 SWEP.InLoadoutFor = {nil}
 SWEP.AllowDrop = true
