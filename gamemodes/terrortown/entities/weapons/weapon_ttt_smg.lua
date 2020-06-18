@@ -1,10 +1,10 @@
 AddCSLuaFile()
 
 if CLIENT then
-	SWEP.PrintName = "MP7"
-	SWEP.Slot = 2
-	SWEP.Icon = "vgui/ttt/icon_smg"
-	SWEP.IconLetter = "d"
+    SWEP.PrintName = "MP7"
+    SWEP.Slot = 2
+    SWEP.Icon = "vgui/ttt/icon_smg"
+    SWEP.IconLetter = "d"
 end
 
 SWEP.Base = "weapon_tttbase"
@@ -43,8 +43,8 @@ SWEP.NoSights = false
 -- weapon_tttbase's SWEP:Reload() might break this code and should be pulled from
 -- Facepunch/garrysmod if made.
 function SWEP:Reload()
-	if (self:Clip1() == self.Primary.ClipSize or self:GetOwner():GetAmmoCount(self.Primary.Ammo) <= 0) then return end
-	self:DefaultReload(self.ReloadAnim)
-	self:EmitSound("Weapon_SMG1.Reload") -- My added line
-	self:SetIronsights(false)
+    if (self:Clip1() == self.Primary.ClipSize or self:GetOwner():GetAmmoCount(self.Primary.Ammo) <= 0) then return end
+    self:DefaultReload(self.ReloadAnim)
+    self:EmitSound("Weapon_SMG1.Reload") -- My added line
+    self:SetIronsights(false)
 end

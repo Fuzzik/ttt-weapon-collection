@@ -1,10 +1,10 @@
 AddCSLuaFile()
 
 if CLIENT then
-	SWEP.PrintName = "Jihad Bomb"
-	SWEP.Slot = 6
-	SWEP.Icon = "vgui/ttt/icon_c4"
-	SWEP.IconLetter = "I"
+    SWEP.PrintName = "Jihad Bomb"
+    SWEP.Slot = 6
+    SWEP.Icon = "vgui/ttt/icon_c4"
+    SWEP.IconLetter = "I"
 end
 
 SWEP.Base = "weapon_tttbase"
@@ -34,47 +34,47 @@ SWEP.IsSilent = false
 SWEP.NoSights = true
 
 function SWEP:Precache()
-	util.PrecacheSound("siege/big_explosion.wav")
-	util.PrecacheSound("siege/jihad.wav")
+    util.PrecacheSound("siege/big_explosion.wav")
+    util.PrecacheSound("siege/jihad.wav")
 end
 
 function SWEP:Reload()
 end
 
 function SWEP:PrimaryAttack()
-	self:SetNextPrimaryFire(CurTime() + 2)
-	
-	local effectdata = EffectData()
-	effectdata:SetOrigin(self:GetOwner():GetPos())
-	effectdata:SetNormal(self:GetOwner():GetPos())
-	effectdata:SetMagnitude(8)
-	effectdata:SetScale(1)
-	effectdata:SetRadius(78)
-	util.Effect("Sparks", effectdata)
-	self.BaseClass.ShootEffects(self)
-	
-	if (SERVER) then
-		timer.Simple(2, function() self:Explode() end)
-		self:GetOwner():EmitSound("siege/jihad.wav")
-	end
+    self:SetNextPrimaryFire(CurTime() + 2)
+    
+    local effectdata = EffectData()
+    effectdata:SetOrigin(self:GetOwner():GetPos())
+    effectdata:SetNormal(self:GetOwner():GetPos())
+    effectdata:SetMagnitude(8)
+    effectdata:SetScale(1)
+    effectdata:SetRadius(78)
+    util.Effect("Sparks", effectdata)
+    self.BaseClass.ShootEffects(self)
+    
+    if (SERVER) then
+        timer.Simple(2, function() self:Explode() end)
+        self:GetOwner():EmitSound("siege/jihad.wav")
+    end
 end
 
 function SWEP:Explode()
-	local k, v
-	
-	local ent = ents.Create("env_explosion")
-	ent:SetPos(self:GetOwner():GetPos())
-	ent:SetOwner(self:GetOwner())
-	ent:SetKeyValue("iMagnitude", "200")
-	ent:Spawn()
-	ent:Fire("Explode", 0, 0)
-	ent:EmitSound("siege/big_explosion.wav", 140)
-	self:Remove()
+    local k, v
+    
+    local ent = ents.Create("env_explosion")
+    ent:SetPos(self:GetOwner():GetPos())
+    ent:SetOwner(self:GetOwner())
+    ent:SetKeyValue("iMagnitude", "200")
+    ent:Spawn()
+    ent:Fire("Explode", 0, 0)
+    ent:EmitSound("siege/big_explosion.wav", 140)
+    self:Remove()
 end
 
 if CLIENT then
-	SWEP.EquipMenuData = {
-		type = "Weapon",
-		desc = "Sacrifice yourself to Allah.\n\nYour 72 virgins await."
-	}
+    SWEP.EquipMenuData = {
+        type = "Weapon",
+        desc = "Sacrifice yourself to Allah.\n\nYour 72 virgins await."
+    }
 end

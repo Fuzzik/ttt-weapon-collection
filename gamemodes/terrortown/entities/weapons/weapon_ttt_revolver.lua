@@ -1,10 +1,10 @@
 AddCSLuaFile()
 
 if CLIENT then
-	SWEP.PrintName = "S&W 500"
-	SWEP.Slot = 6
-	SWEP.Icon = "vgui/ttt/icon_revolver"
-	SWEP.IconLetter = "f"
+    SWEP.PrintName = "S&W 500"
+    SWEP.Slot = 6
+    SWEP.Icon = "vgui/ttt/icon_revolver"
+    SWEP.IconLetter = "f"
 end
 
 SWEP.Base = "weapon_tttbase"
@@ -41,14 +41,14 @@ SWEP.IsSilent = false
 SWEP.NoSights = false
 
 function SWEP:Precache()
-	util.PrecacheSound("weapons/det_revolver/revolver-fire.wav")
+    util.PrecacheSound("weapons/det_revolver/revolver-fire.wav")
 end
 
 sound.Add ({
-	name = "Weapon_DetRev.Single",
-	channel = CHAN_USER_BASE + 10,
-	volume = 1.0,
-	sound = "weapons/det_revolver/revolver-fire.wav"
+    name = "Weapon_DetRev.Single",
+    channel = CHAN_USER_BASE + 10,
+    volume = 1.0,
+    sound = "weapons/det_revolver/revolver-fire.wav"
 })
 
 -- Redefine weapon_tttbase's SWEP:Reload() here with one extra line to explicitly emit a
@@ -57,15 +57,15 @@ sound.Add ({
 -- weapon_tttbase's SWEP:Reload() might break this code and should be pulled from
 -- Facepunch/garrysmod if made.
 function SWEP:Reload()
-	if (self:Clip1() == self.Primary.ClipSize or self:GetOwner():GetAmmoCount(self.Primary.Ammo) <= 0) then return end
-	self:DefaultReload(self.ReloadAnim)
-	self:EmitSound("Weapon_357.Reload") -- My added line
-	self:SetIronsights(false)
+    if (self:Clip1() == self.Primary.ClipSize or self:GetOwner():GetAmmoCount(self.Primary.Ammo) <= 0) then return end
+    self:DefaultReload(self.ReloadAnim)
+    self:EmitSound("Weapon_357.Reload") -- My added line
+    self:SetIronsights(false)
 end
 
 if CLIENT then
-	SWEP.EquipMenuData = {
-		type = "Weapon",
-		desc = "Eliminate any terrorist in one shot."
-	}
+    SWEP.EquipMenuData = {
+        type = "Weapon",
+        desc = "Eliminate any terrorist in one shot."
+    }
 end

@@ -1,10 +1,10 @@
 AddCSLuaFile()
 
 if CLIENT then
-	SWEP.PrintName = "Silenced M4A1"
-	SWEP.Slot = 6
-	SWEP.Icon = "vgui/ttt/icon_m16"
-	SWEP.IconLetter = "w"
+    SWEP.PrintName = "Silenced M4A1"
+    SWEP.Slot = 6
+    SWEP.Icon = "vgui/ttt/icon_m16"
+    SWEP.IconLetter = "w"
 end
 
 SWEP.Base = "weapon_tttbase"
@@ -44,13 +44,13 @@ SWEP.PrimaryAnim = ACT_VM_PRIMARYATTACK_SILENCED
 SWEP.ReloadAnim = ACT_VM_RELOAD_SILENCED
 
 function SWEP:Deploy()
-	self:SendWeaponAnim(ACT_VM_DRAW_SILENCED)
-	return self.BaseClass.Deploy(self)
+    self:SendWeaponAnim(ACT_VM_DRAW_SILENCED)
+    return self.BaseClass.Deploy(self)
 end
 
 if CLIENT then
-	SWEP.EquipMenuData = {
-		type = "Weapon",
-		desc = "A modified M4A1 carbine with a suppressor.\n\nVictims will not scream when killed."
-	}
+    SWEP.EquipMenuData = {
+        type = "Weapon",
+        desc = "A modified M4A1 carbine with a suppressor.\n\nVictims will not scream when killed."
+    }
 end

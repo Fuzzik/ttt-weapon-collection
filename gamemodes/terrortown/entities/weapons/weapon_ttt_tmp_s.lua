@@ -1,10 +1,10 @@
 AddCSLuaFile()
 
 if CLIENT then
-	SWEP.PrintName = "Silent Fox"
-	SWEP.Slot = 6
-	SWEP.Icon = "vgui/ttt/icon_tmp"
-	SWEP.IconLetter = "d"
+    SWEP.PrintName = "Silent Fox"
+    SWEP.Slot = 6
+    SWEP.Icon = "vgui/ttt/icon_tmp"
+    SWEP.IconLetter = "d"
 end
 
 SWEP.Base = "weapon_tttbase"
@@ -41,8 +41,8 @@ SWEP.IsSilent = true
 SWEP.NoSights = false
 
 if CLIENT then
-	SWEP.EquipMenuData = {
-		type = "Weapon",
-		desc = "Low-noise SMG that uses normal 9mm ammo.\n\nVictims will not scream when killed."
-	}
+    SWEP.EquipMenuData = {
+        type = "Weapon",
+        desc = "Low-noise SMG that uses normal 9mm ammo.\n\nVictims will not scream when killed."
+    }
 end

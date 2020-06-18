@@ -1,10 +1,10 @@
 AddCSLuaFile()
 
 if CLIENT then
-	SWEP.PrintName = "AK47"
-	SWEP.Slot = 6
-	SWEP.Icon = "vgui/ttt/icon_ak47"
-	SWEP.IconLetter = "b"
+    SWEP.PrintName = "AK47"
+    SWEP.Slot = 6
+    SWEP.Icon = "vgui/ttt/icon_ak47"
+    SWEP.IconLetter = "b"
 end
 
 SWEP.Base = "weapon_tttbase"
@@ -41,8 +41,8 @@ SWEP.IsSilent = false
 SWEP.NoSights = false
 
 if CLIENT then
-	SWEP.EquipMenuData = {
-		type = "Weapon",
-		desc = "Assault rifle with very high damage.\n\nHas very high recoil."
-	}
+    SWEP.EquipMenuData = {
+        type = "Weapon",
+        desc = "Assault rifle with very high damage.\n\nHas very high recoil."
+    }
 end

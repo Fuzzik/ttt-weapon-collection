@@ -1,10 +1,10 @@
 AddCSLuaFile()
 
 if CLIENT then
-	SWEP.PrintName = "Frag grenade"
-	SWEP.Slot = 3
-	SWEP.Icon = "vgui/ttt/icon_nades"
-	SWEP.IconLetter = "O"
+    SWEP.PrintName = "Frag grenade"
+    SWEP.Slot = 3
+    SWEP.Icon = "vgui/ttt/icon_nades"
+    SWEP.IconLetter = "O"
 end
 
 SWEP.Base = "weapon_tttbasegrenade"
@@ -25,12 +25,12 @@ SWEP.AllowDrop = true
 SWEP.NoSights = true
 
 function SWEP:GetGrenadeName()
-	return "ttt_frag_proj"
+    return "ttt_frag_proj"
 end
 
 if CLIENT then
-	SWEP.EquipMenuData = {
-		type = "Grenade",
-		desc = "A highly explosive grenade."
-	}
+    SWEP.EquipMenuData = {
+        type = "Grenade",
+        desc = "A highly explosive grenade."
+    }
 end

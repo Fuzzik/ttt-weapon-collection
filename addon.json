@@ -1,12 +1,13 @@
 {
-	"title"		:	"TTT Weapon Collection",
-	"type"		:	"weapon",
-	"tags"		:	[ "fun", "realism" ],
-	"ignore"	:
-	[
-		".git*",
-		".gitattributes",
-		".gitignore",
-		"*.md"
-	]
+    "title"  : "TTT Weapon Collection",
+    "type"   : "weapon",
+    "tags"   : ["fun", "realism"],
+    "ignore" :
+    [
+        ".git*",
+        ".gitattributes",
+        ".gitignore",
+        "addon.jpg",
+        "README.md"
+    ]
 }
