@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 if CLIENT then
-    SWEP.PrintName = "Jihad Bomb"
+    SWEP.PrintName = "Suicide Bomb"
     SWEP.Slot = 6
     SWEP.Icon = "vgui/ttt/icon_c4"
     SWEP.IconLetter = "I"
@@ -35,7 +35,7 @@ SWEP.NoSights = true
 
 function SWEP:Precache()
     util.PrecacheSound("siege/big_explosion.wav")
-    util.PrecacheSound("siege/jihad.wav")
+    util.PrecacheSound("siege/suicide.wav")
 end
 
 function SWEP:Reload()
@@ -55,7 +55,7 @@ function SWEP:PrimaryAttack()
     
     if (SERVER) then
         timer.Simple(2, function() self:Explode() end)
-        self:GetOwner():EmitSound("siege/jihad.wav")
+        self:GetOwner():EmitSound("siege/suicide.wav")
     end
 end
 
@@ -75,6 +75,6 @@ end
 if CLIENT then
     SWEP.EquipMenuData = {
         type = "Weapon",
-        desc = "Sacrifice yourself to Allah.\n\nYour 72 virgins await."
+        desc = "Go out in a screaming frenzy!\n\nKills user and surrounding terrorists."
     }
 end
